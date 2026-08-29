@@ -1,4 +1,11 @@
 import projectData from "./projects.json";
+import type { StaticImageData } from "next/image";
+import bhiveScreenshot from "../_screenshots/bhive.png";
+import faz3aClient1Screenshot from "../_screenshots/faz3a-client-1.png";
+import faz3aClient2Screenshot from "../_screenshots/faz3a-client-2.png";
+import faz3aVendor1Screenshot from "../_screenshots/faz3a-vendor-1.png";
+import faz3aVendor2Screenshot from "../_screenshots/faz3a-vendor-2.png";
+import theberScreenshot from "../_screenshots/theber.png";
 
 export type NavItem = {
   label: string;
@@ -27,6 +34,23 @@ export type ProjectItem = {
   highlights: string[];
   repoUrl?: string;
   demoUrl?: string;
+  screenshots?: ProjectScreenshot[];
+};
+
+export type ProjectScreenshot = {
+  src: StaticImageData;
+  alt: string;
+  label?: string;
+};
+
+type ProjectScreenshotRecord = {
+  file: string;
+  alt: string;
+  label?: string;
+};
+
+type ProjectRecord = Omit<ProjectItem, "screenshots"> & {
+  screenshots?: ProjectScreenshotRecord[];
 };
 
 export type SkillGroup = {
@@ -110,7 +134,23 @@ export const focusAreas: FocusArea[] = [
   },
 ];
 
-export const projects: ProjectItem[] = projectData;
+const screenshotAssets: Record<string, StaticImageData> = {
+  "bhive.png": bhiveScreenshot,
+  "faz3a-client-1.png": faz3aClient1Screenshot,
+  "faz3a-client-2.png": faz3aClient2Screenshot,
+  "faz3a-vendor-1.png": faz3aVendor1Screenshot,
+  "faz3a-vendor-2.png": faz3aVendor2Screenshot,
+  "theber.png": theberScreenshot,
+};
+
+export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((project) => ({
+  ...project,
+  screenshots: project.screenshots?.map((shot) => ({
+    src: screenshotAssets[shot.file],
+    alt: shot.alt,
+    label: shot.label,
+  })),
+}));
 
 export const skillGroups: SkillGroup[] = [
   {

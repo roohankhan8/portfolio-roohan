@@ -24,6 +24,12 @@
       "Worked as a backend engineer on the platform's API and product workflows.",
       "Designed around multiple vendors rather than a single-store commerce model.",
       "Continuing development toward a Bahrain-focused ecommerce product."
+    ],
+    "screenshots": [
+      {
+        "file": "bhive.png",
+        "alt": "Bhive mobile product screen"
+      }
     ]
   },
   {
@@ -39,7 +45,19 @@
       "Supported separate application flows for customers and service providers.",
       "Product website: faz3a.io."
     ],
-    "demoUrl": "https://faz3a.io/"
+    "demoUrl": "https://faz3a.io/",
+    "screenshots": [
+      {
+        "file": "faz3a-client-1.png",
+        "alt": "Faz3a client application home screen",
+        "label": "Client"
+      },
+      {
+        "file": "faz3a-client-2.png",
+        "alt": "Faz3a client application service flow screen",
+        "label": "Client"
+      }
+    ]
   },
   {
     "slug": "website-support-for-the-ber",
@@ -54,6 +72,12 @@
       "Designed role-based access control for builders, raters, modelers, admins, and students.",
       "Optimized SQL queries on a large production database to reduce load and improve response times.",
       "Developed APIs and file-handling workflows for plan management, submissions, and full project lifecycle operations."
+    ],
+    "screenshots": [
+      {
+        "file": "theber.png",
+        "alt": "The BER project interface screenshot"
+      }
     ]
   },
   {

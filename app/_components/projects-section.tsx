@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "../_lib/portfolio-data";
 import { SectionHeading } from "./section-heading";
 
@@ -16,7 +17,13 @@ export function ProjectsSection() {
               id={project.slug}
               className="surface-panel rounded-[1.75rem] p-6 sm:p-8"
             >
-              <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.65fr)]">
+              <div
+                className={`grid gap-8 ${
+                  project.screenshots?.length
+                    ? "lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.72fr)]"
+                    : "lg:grid-cols-[minmax(0,1fr)]"
+                }`}
+              >
                 <div className="space-y-5">
                   <div className="flex flex-wrap items-center gap-3">
                     <span className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--accent)]">
@@ -71,38 +78,40 @@ export function ProjectsSection() {
                     ))}
                   </ul>
                 </div>
-                {/* <div className="space-y-4">
-                  <div className="rounded-[1.5rem] border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-5">
+                {project.screenshots?.length ? (
+                  <div className="space-y-4">
+                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
+                      Product View
+                    </p>
+                    <div className="grid grid-cols-2">
+                      {project.screenshots.map((shot) => (
+                        <figure
+                          key={`${project.slug}-${shot.alt}`}
+                          className={`w-full ${project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
+                        >
+                          <div className="rounded-[2rem] border border-[var(--border-strong)] bg-[rgba(7,11,17,0.78)] p-2 shadow-[0_24px_60px_rgba(0,0,0,0.34)]">
+                            {/* <div className="rounded-[1.5rem] border border-[rgba(255,255,255,0.06)] bg-[rgba(17,24,36,0.92)] p-2"> */}
+                              <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem] bg-[rgba(7,11,17,0.92)]">
+                                <Image
+                                  src={shot.src}
+                                  alt={shot.alt}
+                                  fill
+                                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
+                                  className="object-cover object-top"
+                                />
+                              </div>
+                            {/* </div> */}
+                          </div>
+                          {shot.label ? (
+                            <figcaption className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-muted)]">
+                              {shot.label}
+                            </figcaption>
+                          ) : null}
+                        </figure>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-3">
-                    <a
-                      href={`#${project.slug}`}
-                      className="button-secondary inline-flex h-11 items-center justify-center rounded-xl px-4 text-sm font-medium"
-                    >
-                      View Case Study
-                    </a>
-                    {project.repoUrl ? (
-                      <a
-                        href={project.repoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="button-ghost inline-flex h-11 items-center justify-center rounded-xl px-4 text-sm font-medium"
-                      >
-                        GitHub
-                      </a>
-                    ) : null}
-                    {project.demoUrl ? (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="button-ghost inline-flex h-11 items-center justify-center rounded-xl px-4 text-sm font-medium"
-                      >
-                        Live Demo
-                      </a>
-                    ) : null}
-                  </div>
-                </div> */}
+                ) : null}
               </div>
             </article>
           ))}
