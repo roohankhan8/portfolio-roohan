@@ -15,9 +15,9 @@ export function HeroSection() {
       <div className="container-shell grid items-center gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(20rem,0.8fr)]">
         <div className="space-y-8">
           <div className="space-y-5">
-            <p className="font-mono text-xs uppercase tracking-[0.28em] text-[var(--accent)]">
+            {/* <p className="font-mono text-xs uppercase tracking-[0.28em] text-[var(--accent)]">
               [ 01 ] BACKEND ENGINEERING
-            </p>
+            </p> */}
             <div className="space-y-4">
               <h1 className="max-w-5xl text-[clamp(3rem,7vw,5rem)] font-semibold leading-[0.95] tracking-[-0.06em]">
                 Roohan Khan

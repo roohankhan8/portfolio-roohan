@@ -5,7 +5,6 @@ export function AboutSection() {
     <section id="about" className="section-block">
       <div className="container-shell grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(18rem,0.9fr)]">
         <SectionHeading
-          eyebrow="[ 02 ] ABOUT"
           title="Backend-first, product-aware, and expanding into deeper system design."
           description="Roohan's public work shows a developer who started with web development, shipped full-stack applications when needed, and kept leaning further into backend structure, APIs, data, and maintainable product workflows."
         />
