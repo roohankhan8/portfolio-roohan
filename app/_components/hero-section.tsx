@@ -63,7 +63,7 @@ export function HeroSection() {
         </div>
         <div className="space-y-5">
           <Hero3DScene />
-          <div className="hero-scene-caption surface-panel rounded-[1.5rem] p-5">
+          {/* <div className="hero-scene-caption surface-panel rounded-[1.5rem] p-5">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
@@ -76,7 +76,7 @@ export function HeroSection() {
               </div>
               <span className="hero-status-pill">Live</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
