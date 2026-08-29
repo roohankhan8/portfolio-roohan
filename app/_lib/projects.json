@@ -20,6 +20,9 @@
     "summary": "Ecommerce platform for Bahrain with support for multiple vendors, currently in development.",
     "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
     "stack": ["Laravel", "MySQL", "Nova", "Vue"],
+    "images": [
+      { "src": "/project-screenshots/bhive.png", "alt": "Bhive ecommerce home screen" }
+    ],
     "highlights": [
       "Worked as a backend engineer on the platform's API and product workflows.",
       "Designed around multiple vendors rather than a single-store commerce model.",
@@ -34,6 +37,12 @@
     "summary": "Service booking platform for users, paired with a vendor app for service providers.",
     "problem": "Connect customers who need services with vendors who can provide them through coordinated booking, service, and vendor workflows.",
     "stack": ["Laravel", "Nova", "Vue.js", "MySQL"],
+    "images": [
+      { "src": "/project-screenshots/faz3a-client-1.png", "alt": "Faz3a customer app home screen" },
+      { "src": "/project-screenshots/faz3a-client-2.png", "alt": "Faz3a customer app services screen" },
+      { "src": "/project-screenshots/faz3a-vendor-1.png", "alt": "Faz3a vendor app dashboard" },
+      { "src": "/project-screenshots/faz3a-vendor-2.png", "alt": "Faz3a vendor app booking screen" }
+    ],
     "highlights": [
       "Worked as a backend engineer across the user booking experience and vendor operations.",
       "Supported separate application flows for customers and service providers.",
@@ -48,6 +57,9 @@
     "summary": "Publicly listed modernization project focused on moving BER functionality into a Laravel application.",
     "problem": "Rework an existing BER workflow into a Laravel-based product structure that is easier to extend and maintain.",
     "stack": ["PHP"],
+    "images": [
+      { "src": "/project-screenshots/theber.png", "alt": "The BER website homepage" }
+    ],
     "highlights": [
       "Positioned as a modernization effort rather than a greenfield build.",
       "Fits the portfolio narrative around backend restructuring and maintainable product development."

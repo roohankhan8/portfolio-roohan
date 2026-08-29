@@ -21,6 +21,7 @@ export type ProjectItem = {
   title: string;
   period?: string;
   role?: string;
+  images?: { src: string; alt: string }[];
   summary: string;
   problem: string;
   stack: string[];

@@ -74,7 +74,7 @@ export function HeroSection() {
               </span>
             </div>
             <div className="space-y-4">
-              <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
                   Request
                 </p>
@@ -83,7 +83,7 @@ export function HeroSection() {
                 </p>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
                   <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)]">
                     Services
                   </p>
@@ -95,7 +95,7 @@ export function HeroSection() {
                     payments
                   </p>
                 </div>
-                <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
                   <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)]">
                     Data
                   </p>
@@ -108,7 +108,7 @@ export function HeroSection() {
                   </p>
                 </div>
               </div>
-              <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)]">
                   Response
                 </p>

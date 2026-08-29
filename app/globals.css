@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  --bg: #070b11;
-  --bg-elevated: #0d121a;
-  --surface: #111824;
-  --surface-strong: #16202d;
-  --border: #233044;
-  --border-strong: #31435f;
-  --text: #f3f7fb;
-  --text-secondary: #a6b4c8;
-  --text-muted: #6f8098;
-  --accent: #4ea1ff;
-  --accent-hover: #78b8ff;
-  --accent-soft: rgba(78, 161, 255, 0.12);
-  --success: #33c27f;
-  --warning: #f2b84b;
-  --error: #ef5f6c;
+  color-scheme: light;
+  --bg: #fdfffc;
+  --bg-elevated: #f3f7f3;
+  --surface: #ffffff;
+  --surface-strong: #e7eef4;
+  --border: rgba(35, 87, 137, 0.2);
+  --border-strong: #235789;
+  --text: #020100;
+  --text-secondary: #314a60;
+  --text-muted: #617487;
+  --accent: #235789;
+  --accent-hover: #17416a;
+  --accent-soft: rgba(35, 87, 137, 0.12);
+  --signal: #c1292e;
+  --highlight: #f1d302;
+  --surface-translucent: rgba(253, 255, 252, 0.88);
+  --shadow: rgba(2, 1, 0, 0.12);
 }
 
 @theme inline {
@@ -38,8 +39,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(78, 161, 255, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(13, 18, 26, 0.92), rgba(7, 11, 17, 1));
+    radial-gradient(circle at top right, rgba(241, 211, 2, 0.22), transparent 28%),
+    linear-gradient(180deg, var(--bg), var(--bg-elevated));
   color: var(--text);
   font-family: var(--font-geist-sans), sans-serif;
 }
@@ -69,30 +70,30 @@ button {
 
 .surface-panel {
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(17, 24, 36, 0.92), rgba(13, 18, 26, 0.92));
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(243, 247, 243, 0.96));
+  box-shadow: 0 18px 50px var(--shadow);
 }
 
 .button-primary {
   border: 1px solid transparent;
-  background: linear-gradient(180deg, var(--accent), #2b7be0);
-  color: #02111f;
+  background: linear-gradient(180deg, var(--accent), var(--accent-hover));
+  color: var(--bg);
 }
 
 .button-primary:hover {
-  background: linear-gradient(180deg, var(--accent-hover), #378af3);
+  background: linear-gradient(180deg, var(--accent-hover), var(--accent));
 }
 
 .button-secondary {
   border: 1px solid var(--border-strong);
-  background: rgba(17, 24, 36, 0.72);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--text);
 }
 
 .button-secondary:hover,
 .button-ghost:hover {
-  border-color: rgba(243, 247, 251, 0.18);
-  background: rgba(22, 32, 45, 0.9);
+  border-color: var(--accent);
+  background: var(--accent-soft);
 }
 
 .button-ghost {
@@ -103,14 +104,14 @@ button {
 
 .chip {
   border: 1px solid var(--border);
-  background: rgba(17, 24, 36, 0.7);
+  background: rgba(35, 87, 137, 0.07);
   color: var(--text-secondary);
 }
 
 .technical-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(35, 87, 137, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 87, 137, 0.1) 1px, transparent 1px);
   background-size: 3rem 3rem;
 }
 

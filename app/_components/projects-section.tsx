@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projects } from "../_lib/portfolio-data";
 import { SectionHeading } from "./section-heading";
 
@@ -62,7 +63,25 @@ export function ProjectsSection() {
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <div className="rounded-[1.5rem] border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-5">
+                  {project.images?.length ? (
+                    <div className="grid grid-cols-2 gap-3">
+                      {project.images.map((image) => (
+                        <div
+                          key={image.src}
+                          className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface-strong)]"
+                        >
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            sizes="(min-width: 1024px) 20vw, 45vw"
+                            className="object-cover object-top transition-transform duration-500 hover:scale-105"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+                  <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface)] p-5">
                     <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
                       Case Study
                     </p>

@@ -44,7 +44,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
   }, [items]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--border)]/80 bg-[color:rgba(7,11,17,0.82)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-[var(--border)]/80 bg-[var(--surface-translucent)] backdrop-blur-xl">
       <div className="container-shell py-4">
         <div className="flex min-h-12 items-center justify-between gap-6">
           <a
@@ -80,7 +80,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={social.label}
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[rgba(17,24,36,0.75)] font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text)]"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--surface)] font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text)]"
               >
                 {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
               </a>
@@ -114,7 +114,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   className={`rounded-xl px-4 py-3 text-sm transition-colors ${
                       isActive
                         ? "bg-[var(--accent-soft)] text-[var(--text)]"
-                        : "text-[var(--text-secondary)] hover:bg-[rgba(17,24,36,0.72)] hover:text-[var(--text)]"
+                        : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)]"
                     }`}
                   >
                     {item.label}
