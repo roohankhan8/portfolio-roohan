@@ -1,5 +1,5 @@
-import { getTechIcon } from "../_lib/tech-icons";
 import { socialLinks } from "../_lib/portfolio-data";
+import { TechBadge } from "./tech-badge";
 
 const highlightedStack = [
   "PHP",
@@ -53,24 +53,11 @@ export function HeroSection() {
             ))}
           </div>
           <ul className="flex flex-wrap gap-3">
-            {highlightedStack.map((item) => {
-              const Icon = getTechIcon(item);
-
-              return (
-                <li key={item}>
-                  <div
-                    title={item}
-                    aria-label={item}
-                    className="group flex h-11 items-center overflow-hidden rounded-full border border-[var(--border)] bg-[rgba(17,24,36,0.56)] px-4 text-[var(--text-secondary)] transition-all duration-300 ease-out hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)]"
-                  >
-                    {Icon ? <Icon aria-hidden="true" className="h-4 w-4 shrink-0" /> : null}
-                    <span className="max-w-0 overflow-hidden whitespace-nowrap pl-0 font-mono text-xs uppercase tracking-[0.12em] opacity-0 transition-all duration-300 ease-out group-hover:max-w-32 group-hover:pl-3 group-hover:opacity-100">
-                      {item}
-                    </span>
-                  </div>
-                </li>
-              );
-            })}
+            {highlightedStack.map((item) => (
+              <li key={item}>
+                <TechBadge item={item} size="md" />
+              </li>
+            ))}
           </ul>
         </div>
         {/* <div className="surface-panel relative overflow-hidden rounded-[1.5rem] p-6 sm:p-8">

@@ -88,8 +88,8 @@ export const navItems: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
-  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -197,7 +197,7 @@ export const experienceItems: ExperienceItem[] = [
   {
     title: "Backend Developer",
     organization: "Digital Marketing 30",
-    period: "2025 - January 2026",
+    period: "June 2025 - July 2026",
     location: "Karachi, Pakistan",
     description:
       "Rebuilt the backend of theber.com in Laravel with a more modular structure, designed RBAC for multiple user types, optimized SQL queries on a large production database, and supported project lifecycle APIs and file workflows.",
@@ -210,13 +210,13 @@ export const experienceItems: ExperienceItem[] = [
     description:
       "Worked as a Django backend developer on a university logbook system, implementing authentication, relational data models, and structured record-management workflows.",
   },
-  {
-    title: "BS in Computational Finance",
-    organization: "NED University of Engineering and Technology",
-    period: "October 2022 - October 2026",
-    description:
-      "Formal education backing the software portfolio, with public-facing work spanning backend development, applied ML coursework, and product-oriented engineering projects.",
-  },
+  // {
+  //   title: "BS in Computational Finance",
+  //   organization: "NED University of Engineering and Technology",
+  //   period: "October 2022 - October 2026",
+  //   description:
+  //     "Formal education backing the software portfolio, with public-facing work spanning backend development, applied ML coursework, and product-oriented engineering projects.",
+  // },
 ];
 
 export const engineeringApproach = [

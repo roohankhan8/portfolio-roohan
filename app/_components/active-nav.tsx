@@ -27,8 +27,8 @@ const navIcons: Record<NavItem["href"], IconType> = {
   "#home": FaHome,
   "#about": FaUserAlt,
   "#work": FaBriefcase,
-  "#experience": FaRegBuilding,
   "#skills": FaTools,
+  "#experience": FaRegBuilding,
   "#contact": FaEnvelope,
 };
 
