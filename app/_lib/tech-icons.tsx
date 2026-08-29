@@ -61,7 +61,6 @@ const techIcons: Record<string, IconType> = {
   "Laravel 13": SiLaravel,
   "Laravel AI": FaRobot,
   Laravel: SiLaravel,
-  "Laravel Nova": FaLayerGroup,
   LangChain: SiLangchain,
   "Blade Components": FaLayerGroup,
   "Blade Templating": SiLaravel,

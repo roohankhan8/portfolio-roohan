@@ -78,76 +78,86 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[var(--border)]/80 bg-[color:rgba(7,11,17,0.82)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40">
       <div className="container-shell relative py-4">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-4 inset-y-2 rounded-[1.75rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03))] opacity-70 blur-2xl"
+        />
         <div className="flex min-h-12 items-center justify-between gap-6">
-          <a
-            href="#home"
-            aria-label="Go to home"
-            className="relative h-11 w-28 transition-transform duration-300 ease-out hover:scale-[1.03]"
-          >
-            <Image
-              src={logoTransparent}
-              alt="Roohan Khan"
-              fill
-              sizes="112px"
-              preload
-              className="object-contain object-left"
+          <div className="relative flex w-full items-center justify-between gap-6 rounded-[1.75rem] border border-white/12 bg-[linear-gradient(135deg,rgba(11,18,30,0.52),rgba(11,18,30,0.22))] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-2xl supports-[backdrop-filter]:bg-[linear-gradient(135deg,rgba(11,18,30,0.42),rgba(11,18,30,0.16))]">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10"
             />
-          </a>
-          <nav aria-label="Primary" className="hidden items-center gap-3 lg:flex">
-            {items.map((item) => {
-              const isActive = item.href === activeHref;
-              const Icon = navIcons[item.href] ?? FaHome;
+            <a
+              href="#home"
+              aria-label="Go to home"
+              className="relative h-11 w-28 transition-transform duration-300 ease-out hover:scale-[1.03]"
+            >
+              <Image
+                src={logoTransparent}
+                alt="Roohan Khan"
+                fill
+                sizes="112px"
+                preload
+                className="object-contain object-left"
+              />
+            </a>
+            <nav aria-label="Primary" className="hidden items-center gap-3 lg:flex">
+              {items.map((item) => {
+                const isActive = item.href === activeHref;
+                const Icon = navIcons[item.href] ?? FaHome;
 
-              return (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={`group flex h-11 items-center overflow-hidden rounded-full border px-4 transition-all duration-300 ease-out ${
-                    isActive
-                      ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--text)] shadow-[0_0_0_1px_rgba(78,161,255,0.2)]"
-                      : "border-[var(--border)] bg-[rgba(17,24,36,0.56)] text-[var(--text-secondary)] hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)]"
-                  }`}
-                >
-                  <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
-                  <span
-                    className={`overflow-hidden whitespace-nowrap pl-0 text-sm transition-all duration-300 ease-out ${
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className={`group flex h-11 items-center overflow-hidden rounded-full border px-4 transition-all duration-300 ease-out ${
                       isActive
-                        ? "max-w-32 pl-3 opacity-100"
-                        : "max-w-0 opacity-0 group-hover:max-w-32 group-hover:pl-3 group-hover:opacity-100"
+                        ? "border-[rgba(124,184,255,0.6)] bg-[linear-gradient(135deg,rgba(78,161,255,0.28),rgba(78,161,255,0.12))] text-[var(--text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_0_0_1px_rgba(78,161,255,0.14)]"
+                        : "border-white/12 bg-[rgba(255,255,255,0.06)] text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[rgba(124,184,255,0.4)] hover:bg-[linear-gradient(135deg,rgba(78,161,255,0.16),rgba(255,255,255,0.08))] hover:text-[var(--text)]"
                     }`}
                   >
-                    {item.label}
-                  </span>
+                    <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
+                    <span
+                      className={`overflow-hidden whitespace-nowrap pl-0 text-sm transition-all duration-300 ease-out ${
+                        isActive
+                          ? "max-w-32 pl-3 opacity-100"
+                          : "max-w-0 opacity-0 group-hover:max-w-32 group-hover:pl-3 group-hover:opacity-100"
+                      }`}
+                    >
+                      {item.label}
+                    </span>
+                  </a>
+                );
+              })}
+            </nav>
+            <div className="hidden items-center gap-3 lg:flex">
+              {socials.map((social) => (
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={social.label}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/12 bg-[rgba(255,255,255,0.06)] font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:border-white/20 hover:bg-[rgba(255,255,255,0.12)] hover:text-[var(--text)]"
+                >
+                  {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
                 </a>
-              );
-            })}
-          </nav>
-          <div className="hidden items-center gap-3 lg:flex">
-            {socials.map((social) => (
-              <a
-                key={social.href}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={social.label}
-                className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[rgba(17,24,36,0.75)] font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text)]"
-              >
-                {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
-              </a>
-            ))}
+              ))}
+            </div>
+            <button
+              type="button"
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              onClick={() => setIsOpen((open) => !open)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/12 bg-[rgba(255,255,255,0.08)] text-base text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:border-[rgba(124,184,255,0.4)] hover:bg-[rgba(78,161,255,0.14)] hover:text-[var(--text)] lg:hidden"
+            >
+              {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+            </button>
           </div>
-          <button
-            type="button"
-            aria-expanded={isOpen}
-            aria-controls="mobile-nav"
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-            onClick={() => setIsOpen((open) => !open)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--border)] bg-[rgba(17,24,36,0.72)] text-base text-[var(--text-secondary)] transition-all duration-300 ease-out hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)] lg:hidden"
-          >
-            {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
-          </button>
         </div>
         <div
           id="mobile-nav"
@@ -156,7 +166,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
           }`}
           aria-hidden={!isOpen}
         >
-          <div className="surface-panel rounded-[1.5rem] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.42)]">
+          <div className="rounded-[1.5rem] border border-white/12 bg-[linear-gradient(135deg,rgba(11,18,30,0.72),rgba(11,18,30,0.42))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-2xl">
             <nav aria-label="Mobile primary" className="flex flex-col gap-2">
               {items.map((item) => {
                 const isActive = item.href === activeHref;
@@ -169,8 +179,8 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm transition-all duration-300 ease-out ${
                       isActive
-                        ? "bg-[var(--accent-soft)] text-[var(--text)]"
-                        : "text-[var(--text-secondary)] hover:bg-[rgba(17,24,36,0.72)] hover:text-[var(--text)]"
+                        ? "bg-[linear-gradient(135deg,rgba(78,161,255,0.24),rgba(78,161,255,0.1))] text-[var(--text)]"
+                        : "text-[var(--text-secondary)] hover:bg-[rgba(255,255,255,0.08)] hover:text-[var(--text)]"
                     }`}
                   >
                     <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
@@ -186,7 +196,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="button-secondary inline-flex h-11 items-center justify-center rounded-xl px-4 text-sm font-medium"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/12 bg-[rgba(255,255,255,0.06)] px-4 text-sm font-medium text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:border-white/20 hover:bg-[rgba(255,255,255,0.12)] hover:text-[var(--text)]"
                 >
                   {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
                   <span>{social.label}</span>
