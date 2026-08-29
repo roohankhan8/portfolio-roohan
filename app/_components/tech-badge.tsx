@@ -1,27 +1,47 @@
+import { createElement } from "react";
 import { getTechIcon } from "../_lib/tech-icons";
 
 type TechBadgeProps = {
   item: string;
   size?: "sm" | "md";
   className?: string;
+  previewOnly?: boolean;
 };
 
-export function TechBadge({ item, size = "sm", className = "" }: TechBadgeProps) {
+function BadgeIcon({ item, className }: { item: string; className: string }) {
   const Icon = getTechIcon(item);
+
+  return Icon
+    ? createElement(Icon, {
+        "aria-hidden": "true",
+        className,
+      })
+    : null;
+}
+
+export function TechBadge({
+  item,
+  size = "sm",
+  className = "",
+  previewOnly = false,
+}: TechBadgeProps) {
   const heightClass = size === "md" ? "h-11" : "h-10";
   const iconClass = size === "md" ? "h-[1.125rem] w-[1.125rem]" : "h-4 w-4";
   const textClass = size === "md" ? "text-xs tracking-[0.12em]" : "text-[11px] tracking-[0.14em]";
-  const labelClass = Icon
-    ? `max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-300 ease-out group-hover:max-w-40 group-hover:pl-3 group-hover:opacity-100 ${textClass}`
+  const hasIcon = getTechIcon(item) !== null;
+  const labelClass = hasIcon && !previewOnly
+    ? `max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-300 ease-out group-hover/tech:max-w-40 group-hover/tech:pl-3 group-hover/tech:opacity-100 ${textClass}`
     : textClass;
+  const paddingClass = previewOnly && hasIcon ? "w-10 justify-center px-0" : "px-4";
+  const wrapperClass = previewOnly && hasIcon ? "tech-badge-icon-only" : "";
 
   return (
     <div
       title={item}
       aria-label={item}
-      className={`group inline-flex ${heightClass} items-center overflow-hidden rounded-full border border-[var(--border)] bg-[rgba(17,24,36,0.56)] px-4 font-mono uppercase text-[var(--text-secondary)] transition-all duration-300 ease-out hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)] ${className}`}
+      className={`group/tech inline-flex ${heightClass} items-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--chip-bg)] font-mono uppercase text-[var(--text-secondary)] shadow-[var(--chip-shadow)] transition-all duration-300 ease-out hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)] ${paddingClass} ${wrapperClass} ${className}`}
     >
-      {Icon ? <Icon aria-hidden="true" className={`${iconClass} shrink-0`} /> : null}
+      <BadgeIcon item={item} className={`${iconClass} shrink-0`} />
       <span className={labelClass}>
         {item}
       </span>

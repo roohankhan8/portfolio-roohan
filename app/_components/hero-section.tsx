@@ -1,4 +1,5 @@
 import { socialLinks } from "../_lib/portfolio-data";
+import { Hero3DScene } from "./hero-3d-scene";
 import { TechBadge } from "./tech-badge";
 
 const highlightedStack = [
@@ -60,63 +61,23 @@ export function HeroSection() {
             ))}
           </ul>
         </div>
-        {/* <div className="surface-panel relative overflow-hidden rounded-[1.5rem] p-6 sm:p-8">
-          <div className="technical-grid absolute inset-0 opacity-20" />
-           <div className="relative space-y-6">
-            <div className="flex items-center justify-between">
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--text-secondary)]">
-                SYSTEM FLOW
-              </p>
-              <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.16em] text-emerald-300">
-                Online
-              </span>
+        <div className="space-y-5">
+          <Hero3DScene />
+          <div className="hero-scene-caption surface-panel rounded-[1.5rem] p-5">
+            <div className="flex items-center justify-between gap-4">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
+                  Interactive Look
+                </p>
+                <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
+                  A lightweight 3D scene adds motion and depth without pulling
+                  the whole portfolio into a heavy WebGL stack.
+                </p>
+              </div>
+              <span className="hero-status-pill">Live</span>
             </div>
-            <div className="space-y-4">
-              <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
-                  Request
-                </p>
-                <p className="mt-2 text-sm text-[var(--text)]">
-                  POST /api/workflows/content-project
-                </p>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
-                  <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)]">
-                    Services
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--text)]">
-                    auth
-                    <br />
-                    validation
-                    <br />
-                    payments
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
-                  <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)]">
-                    Data
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--text)]">
-                    MySQL
-                    <br />
-                    PostgreSQL
-                    <br />
-                    durable state
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-2xl border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-4">
-                <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)]">
-                  Response
-                </p>
-                <p className="mt-2 text-sm text-[var(--text)]">
-                  200 OK · product workflows connected
-                </p>
-              </div>
-            </div>
-          </div> 
-        </div> */}
+          </div>
+        </div>
       </div>
     </section>
   );

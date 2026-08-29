@@ -87,18 +87,16 @@ export function ProjectsSection() {
                           key={`${project.slug}-${shot.alt}`}
                           className={`w-full ${project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
                         >
-                          <div className="rounded-[2rem] border border-[var(--border-strong)] bg-[rgba(7,11,17,0.78)] p-2 shadow-[0_24px_60px_rgba(0,0,0,0.34)]">
-                            {/* <div className="rounded-[1.5rem] border border-[rgba(255,255,255,0.06)] bg-[rgba(17,24,36,0.92)] p-2"> */}
-                              <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem] bg-[rgba(7,11,17,0.92)]">
-                                <Image
-                                  src={shot.src}
-                                  alt={shot.alt}
-                                  fill
-                                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
-                                  className="object-cover object-top"
-                                />
-                              </div>
-                            {/* </div> */}
+                          <div className="project-shot-frame rounded-[2rem] border border-[var(--border-strong)] p-2">
+                            <div className="project-shot-inner relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem]">
+                              <Image
+                                src={shot.src}
+                                alt={shot.alt}
+                                fill
+                                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
+                                className="object-cover object-top"
+                              />
+                            </div>
                           </div>
                           {shot.label ? (
                             <figcaption className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-muted)]">

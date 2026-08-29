@@ -9,7 +9,9 @@ import {
   FaGithub,
   FaHome,
   FaLinkedinIn,
+  FaMoon,
   FaRegBuilding,
+  FaSun,
   FaTimes,
   FaTools,
   FaUserAlt,
@@ -17,6 +19,13 @@ import {
 import type { IconType } from "react-icons";
 import type { NavItem, SocialLink } from "../_lib/portfolio-data";
 import logoTransparent from "../_logos/logo-transparent.png";
+import {
+  getThemeToggleLabel,
+  getThemeValue,
+  getToggledTheme,
+  THEME_STORAGE_KEY,
+  type Theme,
+} from "../_lib/theme";
 
 type ActiveNavProps = {
   items: NavItem[];
@@ -35,6 +44,13 @@ const navIcons: Record<NavItem["href"], IconType> = {
 export function ActiveNav({ items, socials }: ActiveNavProps) {
   const [activeHref, setActiveHref] = useState(items[0]?.href ?? "#home");
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window === "undefined") {
+      return "light";
+    }
+
+    return getThemeValue(window.localStorage.getItem(THEME_STORAGE_KEY));
+  });
 
   useEffect(() => {
     const sections = items
@@ -77,18 +93,23 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  }, [theme]);
+
   return (
     <header className="sticky top-0 z-40">
       <div className="container-shell relative py-4">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-4 inset-y-2 rounded-[1.75rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.03))] opacity-70 blur-2xl"
+          className="nav-ambient-glow pointer-events-none absolute inset-x-4 inset-y-2 rounded-[1.75rem] opacity-70 blur-2xl"
         />
         <div className="flex min-h-12 items-center justify-between gap-6">
-          <div className="relative flex w-full items-center justify-between gap-6 rounded-[1.75rem] border border-white/12 bg-[linear-gradient(135deg,rgba(11,18,30,0.52),rgba(11,18,30,0.22))] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_18px_50px_rgba(0,0,0,0.22)] backdrop-blur-2xl supports-[backdrop-filter]:bg-[linear-gradient(135deg,rgba(11,18,30,0.42),rgba(11,18,30,0.16))]">
+          <div className="nav-shell relative flex w-full items-center justify-between gap-6 rounded-[1.75rem] px-4 py-3 backdrop-blur-2xl">
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-white/10"
+              className="nav-shell-ring pointer-events-none absolute inset-0 rounded-[1.75rem]"
             />
             <a
               href="#home"
@@ -113,10 +134,10 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`group flex h-11 items-center overflow-hidden rounded-full border px-4 transition-all duration-300 ease-out ${
+                    className={`nav-pill group flex h-11 items-center overflow-hidden rounded-full border px-4 transition-all duration-300 ease-out ${
                       isActive
-                        ? "border-[rgba(124,184,255,0.6)] bg-[linear-gradient(135deg,rgba(78,161,255,0.28),rgba(78,161,255,0.12))] text-[var(--text)] shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_0_0_1px_rgba(78,161,255,0.14)]"
-                        : "border-white/12 bg-[rgba(255,255,255,0.06)] text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[rgba(124,184,255,0.4)] hover:bg-[linear-gradient(135deg,rgba(78,161,255,0.16),rgba(255,255,255,0.08))] hover:text-[var(--text)]"
+                        ? "nav-pill-active text-[var(--text)]"
+                        : "text-[var(--text-secondary)] hover:text-[var(--text)]"
                     }`}
                   >
                     <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
@@ -134,6 +155,14 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
               })}
             </nav>
             <div className="hidden items-center gap-3 lg:flex">
+              <button
+                type="button"
+                aria-label={getThemeToggleLabel(theme)}
+                onClick={() => setTheme((currentTheme) => getToggledTheme(currentTheme))}
+                className="nav-icon-button inline-flex h-10 w-10 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-all duration-300 ease-out hover:text-[var(--text)]"
+              >
+                {theme === "light" ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+              </button>
               {socials.map((social) => (
                 <a
                   key={social.href}
@@ -141,7 +170,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/12 bg-[rgba(255,255,255,0.06)] font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:border-white/20 hover:bg-[rgba(255,255,255,0.12)] hover:text-[var(--text)]"
+                  className="nav-icon-button flex h-10 w-10 items-center justify-center rounded-xl font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] transition-all duration-300 ease-out hover:text-[var(--text)]"
                 >
                   {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
                 </a>
@@ -153,7 +182,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
               aria-controls="mobile-nav"
               aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
               onClick={() => setIsOpen((open) => !open)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/12 bg-[rgba(255,255,255,0.08)] text-base text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:border-[rgba(124,184,255,0.4)] hover:bg-[rgba(78,161,255,0.14)] hover:text-[var(--text)] lg:hidden"
+              className="nav-icon-button inline-flex h-11 w-11 items-center justify-center rounded-xl text-base text-[var(--text-secondary)] transition-all duration-300 ease-out hover:text-[var(--text)] lg:hidden"
             >
               {isOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
             </button>
@@ -166,7 +195,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
           }`}
           aria-hidden={!isOpen}
         >
-          <div className="rounded-[1.5rem] border border-white/12 bg-[linear-gradient(135deg,rgba(11,18,30,0.72),rgba(11,18,30,0.42))] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-2xl">
+          <div className="nav-mobile-panel rounded-[1.5rem] p-4 backdrop-blur-2xl">
             <nav aria-label="Mobile primary" className="flex flex-col gap-2">
               {items.map((item) => {
                 const isActive = item.href === activeHref;
@@ -190,13 +219,22 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
               })}
             </nav>
             <div className="mt-4 flex flex-wrap gap-2">
+              <button
+                type="button"
+                aria-label={getThemeToggleLabel(theme)}
+                onClick={() => setTheme((currentTheme) => getToggledTheme(currentTheme))}
+                className="nav-icon-button inline-flex h-11 items-center justify-center gap-2 rounded-xl px-4 text-sm font-medium text-[var(--text-secondary)] transition-all duration-300 ease-out hover:text-[var(--text)]"
+              >
+                {theme === "light" ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
+                <span>{theme === "light" ? "Dark mode" : "Light mode"}</span>
+              </button>
               {socials.map((social) => (
                 <a
                   key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-white/12 bg-[rgba(255,255,255,0.06)] px-4 text-sm font-medium text-[var(--text-secondary)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 ease-out hover:border-white/20 hover:bg-[rgba(255,255,255,0.12)] hover:text-[var(--text)]"
+                  className="nav-icon-button inline-flex h-11 items-center justify-center gap-2 rounded-xl px-4 text-sm font-medium text-[var(--text-secondary)] transition-all duration-300 ease-out hover:text-[var(--text)]"
                 >
                   {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
                   <span>{social.label}</span>

@@ -1,4 +1,5 @@
 import { skillGroups } from "../_lib/portfolio-data";
+import { getSkillPreviewItems } from "../_lib/skills";
 import { SectionHeading } from "./section-heading";
 import { TechBadge } from "./tech-badge";
 
@@ -26,6 +27,13 @@ export function SkillsSection() {
                     <p className="text-sm leading-7 text-[var(--text-secondary)]">
                       {group.summary}
                     </p>
+                    <ul className="flex flex-wrap gap-2 pt-1">
+                      {getSkillPreviewItems(group.items).map((item) => (
+                        <li key={`${group.title}-${item}`}>
+                          <TechBadge item={item} previewOnly />
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   {/* <span className="rounded-full border border-[var(--border)] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-secondary)] transition-colors group-open:text-[var(--text)]">
                     Open
