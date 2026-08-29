@@ -6,9 +6,8 @@ export function ExperienceSection() {
     <section id="experience" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          eyebrow="[ 06 ] EXPERIENCE"
-          title="Selected public milestones."
-          description="This section stays sourced from the linked profile and resume details, so it can be more specific without drifting into guesswork."
+          title="Experience that maps directly to backend ownership and team contribution."
+          description="For recruiters, clients, and engineering leads, this section highlights the roles and responsibilities most relevant to API development, admin systems, data workflows, and production support."
         />
         <div className="grid gap-4">
           {experienceItems.map((item) => (

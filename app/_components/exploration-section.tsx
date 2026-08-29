@@ -6,9 +6,8 @@ export function ExplorationSection() {
     <section className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          eyebrow="[ 07 ] CURRENTLY EXPLORING"
-          title="Areas I am actively expanding into."
-          description="The portfolio should read as focused growth: deeper backend architecture, cleaner systems, and stronger AI-enabled software workflows."
+          title="Areas I am actively deepening to stay useful in stronger engineering teams."
+          description="This is where my current learning effort is going: deeper architecture, better system boundaries, and more capable AI-enabled application design."
         />
         <div className="surface-panel rounded-[1.75rem] p-6 sm:p-8">
           <ul className="flex flex-wrap gap-3">

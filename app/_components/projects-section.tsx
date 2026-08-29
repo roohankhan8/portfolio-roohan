@@ -6,9 +6,8 @@ export function ProjectsSection() {
     <section id="work" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          eyebrow="[ 03 ] FEATURED WORK"
-          title="Selected projects that reflect backend thinking and product delivery."
-          description="A focused selection of public work across Laravel applications, full-stack products, and applied machine learning."
+          title="Projects that show how I turn requirements into working software."
+          description="This is a focused selection of backend-heavy builds, product systems, and implementation work that an organization can evaluate for execution, ownership, and technical range."
         />
         <div className="grid gap-5">
           {projects.map((project, index) => (
@@ -49,6 +48,17 @@ export function ProjectsSection() {
                     <p className="text-sm leading-7 text-[var(--text)]">
                       {project.problem}
                     </p>
+                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
+                      Case Study
+                    </p>
+                    <ul className="mt-4 space-y-3 text-sm leading-6 text-[var(--text-secondary)]">
+                      {project.highlights.map((highlight) => (
+                        <li key={highlight} className="flex gap-3">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   <ul className="flex flex-wrap gap-2">
                     {project.stack.map((item) => (
@@ -61,19 +71,8 @@ export function ProjectsSection() {
                     ))}
                   </ul>
                 </div>
-                <div className="space-y-4">
+                {/* <div className="space-y-4">
                   <div className="rounded-[1.5rem] border border-[var(--border)] bg-[rgba(7,11,17,0.65)] p-5">
-                    <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
-                      Case Study
-                    </p>
-                    <ul className="mt-4 space-y-3 text-sm leading-6 text-[var(--text-secondary)]">
-                      {project.highlights.map((highlight) => (
-                        <li key={highlight} className="flex gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -103,7 +102,7 @@ export function ProjectsSection() {
                       </a>
                     ) : null}
                   </div>
-                </div>
+                </div> */}
               </div>
             </article>
           ))}

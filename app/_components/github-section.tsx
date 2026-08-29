@@ -6,9 +6,8 @@ export function GitHubSection() {
     <section className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          eyebrow="[ 08 ] GITHUB"
-          title="Public repositories, profile presence, and visible work channels."
-          description="This section uses public profile information rather than brittle contribution widgets."
+          title="Public work that gives teams another way to evaluate how I build."
+          description="Beyond the portfolio itself, these public channels help organizations review code presence, project consistency, and the kind of work I choose to share openly."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           {githubSummaries.map((summary) => (

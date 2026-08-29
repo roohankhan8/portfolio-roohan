@@ -8,9 +8,8 @@ export function ContactSection() {
         <div className="surface-panel rounded-[1.75rem] p-6 sm:p-8 lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
             <SectionHeading
-              eyebrow="[ 07 ] CONTACT"
-              title="Let's build something useful."
-              description="Open to backend-focused product work, collaboration, and conversations around APIs, integrations, and application architecture."
+              title="If your team needs a backend engineer, this is the easiest place to start."
+              description="I’m open to roles and projects centered on Laravel, APIs, integrations, admin systems, and maintainable product architecture."
             />
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               {socialLinks.map((link) => (

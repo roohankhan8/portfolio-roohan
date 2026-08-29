@@ -6,9 +6,8 @@ export function EngineeringApproachSection() {
     <section className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          eyebrow="[ 05 ] HOW I BUILD"
-          title="A backend-first approach to shipping useful software."
-          description="The emphasis stays on workflow clarity, predictable data, reliable integrations, and maintainable product structure."
+          title="How I approach backend work when the goal is reliable software delivery."
+          description="Organizations usually need more than code that works once. This outlines the habits behind building systems that stay understandable, extensible, and dependable as product demands grow."
         />
         <div className="grid gap-4 lg:grid-cols-5">
           {engineeringApproach.map((step, index) => (

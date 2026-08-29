@@ -6,9 +6,8 @@ export function SkillsSection() {
     <section id="skills" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          eyebrow="[ 04 ] TECHNICAL STACK"
-          title="Capabilities grouped by how they are used in real product work."
-          description="The stack is organized around product responsibilities rather than a wall of logos."
+          title="Capabilities organized around delivery, architecture, and product responsibility."
+          description="Instead of listing tools without context, this section shows the technologies and practices I use in the kinds of systems teams actually need shipped and maintained."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           {skillGroups.map((group, index) => (
