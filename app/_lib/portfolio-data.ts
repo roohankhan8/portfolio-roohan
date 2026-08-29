@@ -155,13 +155,13 @@ export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((pro
 export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
-    summary: "Primary lane: Laravel backend systems, REST APIs, RBAC, admin workflows, and maintainable application architecture.",
-    items: ["PHP", "Laravel", "Laravel Nova", "Statamic", "Filament", "REST APIs", "Authentication", "Authorization"],
+    summary: "Primary lane: Laravel application development spanning APIs, database design, RBAC, admin workflows, and maintainable backend architecture.",
+    items: ["PHP", "Laravel", "REST APIs", "Authentication", "Authorization", "RBAC", "MVC Architecture", "Eloquent ORM"],
   },
   {
     title: "Frontend",
-    summary: "Used pragmatically when product delivery needs it, especially for admin surfaces and connected web applications.",
-    items: ["JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Tailwind CSS"],
+    summary: "Used pragmatically when product delivery needs it, especially for Blade-based product views, admin surfaces, and connected web applications.",
+    items: ["HTML5", "CSS3", "JavaScript", "Blade Templating", "Blade Components", "Responsive Admin UI", "React", "Next.js", "Vue.js", "Tailwind CSS"],
   },
   {
     title: "Mobile",
@@ -175,8 +175,8 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Tools and Workflow",
-    summary: "Workflow and infrastructure tools used for shipping, testing, documentation, and collaboration.",
-    items: ["Git", "GitHub", "Pest", "Unit Testing", "Code Reviews", "Technical Documentation", ".NET Core"],
+    summary: "Workflow and delivery tools used for version control, debugging, testing, documentation, and collaborative product development.",
+    items: ["Git", "GitHub", "Pest", "Unit Testing", "Debugging", "Code Reviews", "Technical Documentation", "Third-Party API Integration", ".NET Core"],
   },
   {
     title: "Data Stores",

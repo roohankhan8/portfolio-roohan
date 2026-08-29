@@ -1,3 +1,4 @@
+import { getTechIcon } from "../_lib/tech-icons";
 import { skillGroups } from "../_lib/portfolio-data";
 import { SectionHeading } from "./section-heading";
 
@@ -26,20 +27,32 @@ export function SkillsSection() {
                       {group.summary}
                     </p>
                   </div>
-                  <span className="rounded-full border border-[var(--border)] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-secondary)] transition-colors group-open:text-[var(--text)]">
+                  {/* <span className="rounded-full border border-[var(--border)] px-3 py-1 font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-secondary)] transition-colors group-open:text-[var(--text)]">
                     Open
-                  </span>
+                  </span> */}
                 </div>
               </summary>
               <ul className="mt-5 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="chip rounded-full px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em]"
-                  >
-                    {item}
-                  </li>
-                ))}
+                {group.items.map((item) => {
+                  const Icon = getTechIcon(item);
+
+                  return (
+                    <li
+                      key={item}
+                      title={item}
+                      aria-label={item}
+                      className={`chip rounded-full px-3 py-2 font-mono text-[11px] uppercase tracking-[0.14em] ${
+                        Icon ? "inline-flex h-10 w-10 items-center justify-center px-0" : ""
+                      }`}
+                    >
+                      {Icon ? (
+                        <Icon aria-hidden="true" className="h-4 w-4 text-[var(--text)]" />
+                      ) : (
+                        item
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </details>
           ))}
