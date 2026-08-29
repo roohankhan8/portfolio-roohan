@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import type { NavItem, SocialLink } from "../_lib/portfolio-data";
 
 type ActiveNavProps = {
@@ -42,10 +43,6 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
     return () => observer.disconnect();
   }, [items]);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [activeHref]);
-
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--border)]/80 bg-[color:rgba(7,11,17,0.82)] backdrop-blur-xl">
       <div className="container-shell py-4">
@@ -85,7 +82,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                 aria-label={social.label}
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[rgba(17,24,36,0.75)] font-mono text-xs uppercase tracking-[0.16em] text-[var(--text-secondary)] transition-colors hover:border-[var(--border-strong)] hover:text-[var(--text)]"
               >
-                {social.shortLabel}
+                {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
               </a>
             ))}
           </div>
@@ -111,9 +108,10 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
 
                 return (
                   <a
-                    key={item.href}
-                    href={item.href}
-                    className={`rounded-xl px-4 py-3 text-sm transition-colors ${
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`rounded-xl px-4 py-3 text-sm transition-colors ${
                       isActive
                         ? "bg-[var(--accent-soft)] text-[var(--text)]"
                         : "text-[var(--text-secondary)] hover:bg-[rgba(17,24,36,0.72)] hover:text-[var(--text)]"
@@ -133,7 +131,8 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   rel="noreferrer"
                   className="button-secondary inline-flex h-11 items-center justify-center rounded-xl px-4 text-sm font-medium"
                 >
-                  {social.label}
+                  {social.icon === "linkedin" ? <FaLinkedinIn aria-hidden="true" /> : <FaGithub aria-hidden="true" />}
+                  <span>{social.label}</span>
                 </a>
               ))}
             </div>

@@ -1,3 +1,5 @@
+import projectData from "./projects.json";
+
 export type NavItem = {
   label: string;
   href: `#${string}`;
@@ -6,7 +8,7 @@ export type NavItem = {
 export type SocialLink = {
   label: string;
   href: string;
-  shortLabel: string;
+  icon: "github" | "linkedin";
 };
 
 export type FocusArea = {
@@ -18,6 +20,7 @@ export type ProjectItem = {
   slug: string;
   title: string;
   period?: string;
+  role?: string;
   summary: string;
   problem: string;
   stack: string[];
@@ -70,17 +73,17 @@ export const socialLinks: SocialLink[] = [
   {
     label: "GitHub",
     href: "https://github.com/roohankhan8",
-    shortLabel: "GH",
+    icon: "github",
   },
-  {
-    label: "Work GitHub",
-    href: "https://github.com/roohankhan-klabs",
-    shortLabel: "WK",
-  },
+  // {
+  //   label: "Work GitHub",
+  //   href: "https://github.com/roohankhan-klabs",
+  //   icon: "github",
+  // },
   {
     label: "LinkedIn",
     href: "https://pk.linkedin.com/in/roohan-khan8",
-    shortLabel: "LI",
+    icon: "linkedin",
   },
 ];
 
@@ -107,83 +110,7 @@ export const focusAreas: FocusArea[] = [
   },
 ];
 
-export const projects: ProjectItem[] = [
-  {
-    slug: "ai-content-workflow-app",
-    title: "AI Content Workflow App",
-    period: "2026",
-    summary:
-      "Laravel and React application that turns AI generation into a stateful writing workflow instead of a single prompt screen.",
-    problem:
-      "Create a durable content workspace where briefs, analysis, drafts, conversations, and final output stay connected across the full writing lifecycle.",
-    stack: ["Laravel 13", "React 19", "Laravel AI", "MySQL", "Pest"],
-    highlights: [
-      "Used a shared ContentProject model to persist briefs, drafts, model settings, and final output.",
-      "Separated AI agents by workflow responsibility instead of pushing everything through one prompt layer.",
-      "Stored conversation threads, prompt runs, and streaming results to make the product stateful.",
-    ],
-  },
-  {
-    slug: "revamping-ber-to-laravel",
-    title: "Revamping The BER To Laravel",
-    period: "Sep 2025",
-    summary:
-      "Publicly listed modernization project focused on moving BER functionality into a Laravel application.",
-    problem:
-      "Rework an existing BER workflow into a Laravel-based product structure that is easier to extend and maintain.",
-    stack: ["Laravel"],
-    highlights: [
-      "Positioned as a modernization effort rather than a greenfield build.",
-      "Fits the portfolio narrative around backend restructuring and maintainable product development.",
-    ],
-  },
-  {
-    slug: "price-predictor-for-houses-in-pakistan",
-    title: "Price Predictor For Houses In Pakistan",
-    period: "Aug 2024",
-    summary:
-      "Machine learning project for predicting house prices using multiple regression models and structured preprocessing.",
-    problem:
-      "Improve price prediction quality on a Kaggle housing dataset by handling missing data, outliers, and feature engineering carefully.",
-    stack: ["Python", "Pandas", "Scikit-learn", "Random Forest", "XGBoost"],
-    highlights: [
-      "Built custom data cleaning and categorical conversion functions.",
-      "Created engineered features such as floor ratio and used mutual information scoring.",
-      "Evaluated models with MAE while refining data quality and model behavior.",
-    ],
-  },
-  {
-    slug: "money-manager",
-    title: "Money Manager",
-    period: "Sep 2023",
-    summary:
-      "Full-stack expense tracker built with Next.js and MongoDB to manage income, expenses, and spending analysis.",
-    problem:
-      "Provide a practical personal finance workflow with authentication, visual analysis, and a cleaner review of spending behavior.",
-    stack: ["Next.js", "MongoDB", "Tailwind CSS", "NextAuth", "Chart.js"],
-    highlights: [
-      "Integrated Google authentication for account access.",
-      "Used Chart.js for spending visualizations and review workflows.",
-      "Built as a full-stack product rather than a static frontend showcase.",
-    ],
-    repoUrl: "https://github.com/roohankhan8/exptracker-NextJs",
-  },
-  {
-    slug: "logbook",
-    title: "Logbook",
-    period: "Jul 2023 - Jun 2024",
-    summary:
-      "Django-based web application for creating, editing, and managing structured logbook entries collaboratively.",
-    problem:
-      "Give teams and individuals a cleaner way to record activities, processes, and experiments in a shared web workflow.",
-    stack: ["Django", "Python", "HTML"],
-    highlights: [
-      "Focused on structured entry management rather than simple note storage.",
-      "Designed for collaborative record keeping in web form.",
-    ],
-    repoUrl: "https://github.com/roohankhan8/Logbook",
-  },
-];
+export const projects: ProjectItem[] = projectData;
 
 export const skillGroups: SkillGroup[] = [
   {
@@ -272,13 +199,13 @@ export const githubSummaries: GitHubSummary[] = [
     followers: 3,
     following: 5,
   },
-  {
-    label: "Work GitHub",
-    href: "https://github.com/roohankhan-klabs",
-    note: "Public work profile currently shows 3 repositories and a lightweight project list under the K-Labs handle.",
-    repositories: 3,
-    stars: 4,
-    followers: 1,
-    following: 1,
-  },
+  // {
+  //   label: "Work GitHub",
+  //   href: "https://github.com/roohankhan-klabs",
+  //   note: "Public work profile currently shows 3 repositories and a lightweight project list under the K-Labs handle.",
+  //   repositories: 3,
+  //   stars: 4,
+  //   followers: 1,
+  //   following: 1,
+  // },
 ];

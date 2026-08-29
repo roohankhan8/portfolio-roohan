@@ -62,9 +62,9 @@ export function HeroSection() {
             ))}
           </ul>
         </div>
-        <div className="surface-panel relative overflow-hidden rounded-[1.5rem] p-6 sm:p-8">
+        {/* <div className="surface-panel relative overflow-hidden rounded-[1.5rem] p-6 sm:p-8">
           <div className="technical-grid absolute inset-0 opacity-20" />
-          <div className="relative space-y-6">
+           <div className="relative space-y-6">
             <div className="flex items-center justify-between">
               <p className="font-mono text-xs uppercase tracking-[0.24em] text-[var(--text-secondary)]">
                 SYSTEM FLOW
@@ -117,8 +117,8 @@ export function HeroSection() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> */}
       </div>
     </section>
   );

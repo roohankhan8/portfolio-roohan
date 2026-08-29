@@ -28,6 +28,11 @@ export function ProjectsSection() {
                         {project.period}
                       </span>
                     ) : null}
+                    {project.role ? (
+                      <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--text-secondary)]">
+                        {project.role}
+                      </span>
+                    ) : null}
                   </div>
                   <div className="space-y-3">
                     <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[var(--text)] sm:text-3xl">
