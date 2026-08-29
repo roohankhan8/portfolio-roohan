@@ -54,9 +54,9 @@ export type GitHubSummary = {
 };
 
 export const siteMeta = {
-  title: "Roohan Khan | Backend Developer & Software Engineer",
+  title: "Roohan Khan | Associate Software Engineer - Backend",
   description:
-    "Backend-focused software engineer building APIs, integrations, ecommerce systems, and complete digital products.",
+    "Backend-focused software engineer building Laravel APIs, admin systems, integrations, and maintainable web applications.",
   linkedInUrl: "https://pk.linkedin.com/in/roohan-khan8",
 };
 
@@ -115,13 +115,13 @@ export const projects: ProjectItem[] = projectData;
 export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
-    summary: "Roohan's strongest lane: Laravel applications, APIs, data models, and integration-heavy product logic.",
-    items: ["PHP", "Laravel", "REST APIs", "Authentication", "Payment Integrations", "MySQL", "PostgreSQL"],
+    summary: "Primary lane: Laravel backend systems, REST APIs, RBAC, admin workflows, and maintainable application architecture.",
+    items: ["PHP", "Laravel", "Laravel Nova", "Statamic", "Filament", "REST APIs", "Authentication", "Authorization"],
   },
   {
     title: "Frontend",
-    summary: "Used where product delivery needs it, with emphasis on practical interfaces over visual excess.",
-    items: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    summary: "Used pragmatically when product delivery needs it, especially for admin surfaces and connected web applications.",
+    items: ["JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Tailwind CSS"],
   },
   {
     title: "Mobile",
@@ -130,30 +130,52 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Data and AI",
-    summary: "Applied ML and newer AI workflow experimentation grounded in real product behavior.",
+    summary: "Applied ML work plus newer AI workflow experimentation, with Python still part of the working toolkit.",
     items: ["Python", "Pandas", "Scikit-learn", "XGBoost", "LangChain", "OpenAI", "Embeddings"],
   },
   {
     title: "Tools and Workflow",
-    summary: "Tooling used to ship, learn, and document work publicly.",
-    items: ["Git", "GitHub", "Kaggle", "Pest"],
+    summary: "Workflow and infrastructure tools used for shipping, testing, documentation, and collaboration.",
+    items: ["Git", "GitHub", "Pest", "Unit Testing", "Code Reviews", "Technical Documentation", ".NET Core"],
+  },
+  {
+    title: "Data Stores",
+    summary: "Experience working with relational modeling, query optimization, and practical persistence choices across projects.",
+    items: ["MySQL", "MongoDB", "Firebase", "SQL", "Relational Data Modeling", "Query Optimization"],
   },
 ];
 
 export const experienceItems: ExperienceItem[] = [
   {
-    title: "Public Experience Entry",
+    title: "Jr. Backend Developer",
     organization: "K-Labs",
+    period: "February 2026 - Present",
     location: "Karachi, Pakistan",
     description:
-      "Public LinkedIn experience lists K-Labs in Karachi. The accessible profile view does not expose a role title or date range, so the portfolio should keep this entry concise.",
+      "Designs and develops backend systems and RESTful APIs for web and mobile applications using PHP and Laravel, while also building admin and content workflows with Laravel Nova, Statamic, and Filament.",
   },
   {
-    title: "Engineering Education",
-    organization: "NED University of Engineering and Technology",
-    period: "2022 - 2026",
+    title: "Backend Developer",
+    organization: "Digital Marketing 30",
+    period: "2025 - January 2026",
+    location: "Karachi, Pakistan",
     description:
-      "University timeline listed publicly alongside the software projects, machine learning work, and backend learning path.",
+      "Rebuilt the backend of theber.com in Laravel with a more modular structure, designed RBAC for multiple user types, optimized SQL queries on a large production database, and supported project lifecycle APIs and file workflows.",
+  },
+  {
+    title: "Backend Developer",
+    organization: "NED Scholars",
+    period: "April 2023 - June 2024",
+    location: "Karachi, Pakistan",
+    description:
+      "Worked as a Django backend developer on a university logbook system, implementing authentication, relational data models, and structured record-management workflows.",
+  },
+  {
+    title: "BS in Computational Finance",
+    organization: "NED University of Engineering and Technology",
+    period: "October 2022 - October 2026",
+    description:
+      "Formal education backing the software portfolio, with public-facing work spanning backend development, applied ML coursework, and product-oriented engineering projects.",
   },
 ];
 

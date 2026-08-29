@@ -8,7 +8,7 @@ export function ExperienceSection() {
         <SectionHeading
           eyebrow="[ 06 ] EXPERIENCE"
           title="Selected public milestones."
-          description="The publicly accessible profile data is limited in places, so this section stays factual and compact rather than guessing at missing role details."
+          description="This section stays sourced from the linked profile and resume details, so it can be more specific without drifting into guesswork."
         />
         <div className="grid gap-4">
           {experienceItems.map((item) => (

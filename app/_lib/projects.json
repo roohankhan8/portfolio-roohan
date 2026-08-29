@@ -43,14 +43,17 @@
   },
   {
     "slug": "website-support-for-the-ber",
-    "title": "Support work for The BER",
-    "period": "June 2025 - July 2026",
-    "summary": "Publicly listed modernization project focused on moving BER functionality into a Laravel application.",
-    "problem": "Rework an existing BER workflow into a Laravel-based product structure that is easier to extend and maintain.",
-    "stack": ["PHP"],
+    "title": "The BER backend rebuild",
+    "period": "2025 - January 2026",
+    "role": "Backend Developer",
+    "summary": "Laravel backend rebuild for theber.com focused on modular architecture, role-aware workflows, and production database performance.",
+    "problem": "Replace a harder-to-maintain backend with a Laravel application that could support multiple user roles, project lifecycle operations, and a large production data set more reliably.",
+    "stack": ["Laravel", "PHP", "MySQL", "REST APIs", "RBAC"],
     "highlights": [
-      "Positioned as a modernization effort rather than a greenfield build.",
-      "Fits the portfolio narrative around backend restructuring and maintainable product development."
+      "Rebuilt the backend of theber.com using Laravel with a modular, scalable architecture.",
+      "Designed role-based access control for builders, raters, modelers, admins, and students.",
+      "Optimized SQL queries on a large production database to reduce load and improve response times.",
+      "Developed APIs and file-handling workflows for plan management, submissions, and full project lifecycle operations."
     ]
   },
   {

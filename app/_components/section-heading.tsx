@@ -1,12 +1,10 @@
 type SectionHeadingProps = {
-  eyebrow: string;
   title: string;
   description?: string;
   align?: "left" | "center";
 };
 
 export function SectionHeading({
-  // eyebrow,
   title,
   description,
   align = "left",
