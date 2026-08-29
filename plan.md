@@ -1,684 +1,262 @@
-You are a senior product designer, UI/UX designer, and expert Next.js engineer. Your task is to design and implement a premium personal developer portfolio website for Roohan Khan.
+# Portfolio Implementation Brief
 
-## First: Understand the existing project
+## Objective
 
-Before changing anything:
+Replace the default starter page with a premium personal portfolio for Roohan Khan that presents him as a backend-focused software developer who builds complete applications, APIs, integrations, ecommerce systems, and data-driven products.
 
-1. Inspect the entire existing Next.js codebase.
-2. Identify:
-   * Next.js version
-   * App Router or Pages Router
-   * Existing styling system
-   * Existing dependencies
-   * Existing components
-   * Existing design patterns
-   * Existing assets
-3. Do not unnecessarily replace the existing architecture.
-4. Reuse useful dependencies already installed.
-5. Only add packages when they provide clear value.
-6. Keep the project production-ready, maintainable, responsive, and accessible.
+This file is the build brief for this specific repository. It is not a general prompt. Any missing factual content must remain intentionally omitted rather than invented.
 
-If you have access to the internet or GitHub, review these profiles and repositories to understand Roohan Khan's work and choose the most relevant projects:
+## Current Repository State
 
-* LinkedIn: https://www.linkedin.com/in/roohan-khan8/
-* Personal GitHub: https://github.com/roohankhan8
-* Work GitHub: https://github.com/roohankhan-klabs
+- Framework: Next.js `16.3.3`
+- Router: App Router (`app/`)
+- Language: TypeScript
+- Styling: Tailwind CSS `v4` via `app/globals.css`
+- Fonts already available: `Geist` and `Geist Mono`
+- Current UI state: default `create-next-app` starter
+- Existing dependencies are minimal; do not add packages unless there is clear implementation value
 
-Do not blindly copy profile information. Use them as research material and select the strongest projects and technologies.
+## Product Positioning
 
----
+The portfolio must make this message obvious within the first screen:
 
-# Portfolio identity
+> Roohan Khan is a backend-focused software engineer who builds APIs, integrations, and complete software products.
 
-The portfolio should position Roohan as:
+The site should emphasize:
 
-> A backend-focused software developer who builds complete, scalable applications and is actively expanding into modern backend architecture, APIs, data, and AI-enabled software.
+- Laravel and PHP strength
+- Backend/API development
+- Full-stack delivery when needed
+- Practical work with React, Next.js, and Flutter
+- Databases including MySQL and PostgreSQL
+- Payment, admin, ecommerce, and third-party integration experience
+- Ongoing growth into backend architecture, AI-enabled software, and data work
 
-The website should communicate:
+The site must not read like a generic template or a long list of technologies.
 
-* Strong PHP and Laravel expertise
-* Backend/API development experience
-* Full-stack capability when required
-* Experience working with React, Next.js, Flutter, and modern frontend technologies
-* Database experience with MySQL and PostgreSQL
-* Experience with authentication, payments, admin systems, ecommerce, and third-party integrations
-* Interest and practical work in data science and machine learning
-* Strong curiosity and continuous learning
+## Required Content Strategy
 
-Do NOT make the portfolio look like a generic "I know 30 technologies" developer template.
+Prioritize credibility over coverage.
 
-The narrative should focus on:
+- Feature selected work, not every repository
+- Explain engineering problems and decisions, not only tool names
+- Keep copy specific and short
+- Avoid invented metrics, dates, employers, project outcomes, or repository details
+- If reliable profile data is unavailable during implementation, leave the section compact and factual
 
-> "I build backend systems, APIs, integrations, and complete products."
+## Required Sections
 
----
+Implement a single-page portfolio with these sections in order:
 
-# Overall design direction
+1. Sticky navigation
+2. Hero
+3. Quick profile or focus-area strip
+4. About
+5. Featured work
+6. Technical stack
+7. Engineering approach
+8. Experience
+9. Currently exploring
+10. GitHub activity or selected repository summary
+11. Contact
+12. Footer
 
-Create a modern, high-end developer portfolio.
+## Section Requirements
 
-The visual identity should feel like a combination of:
+### 1. Navigation
 
-* Minimal
-* Technical
-* Modern
-* Professional
-* Slightly futuristic
-* Clean and confident
-* Product-focused
+- Sticky top navigation
+- Links to `Home`, `About`, `Work`, `Experience`, `Skills`, `Contact`
+- External links for GitHub and LinkedIn
+- Resume link only if a real resume asset exists in the repo
+- Mobile navigation required
+- Active section state required
 
-Avoid:
+### 2. Hero
 
-* Generic template designs
-* Excessive gradients
-* Too many floating glass cards
-* Overuse of animations
-* Excessive icons
-* Neon hacker aesthetics
-* A cluttered skill section
-* Huge paragraphs
-* Random decorative elements without purpose
+Must include:
 
-The design should prioritize readability and strong visual hierarchy.
+- Name: `Roohan Khan`
+- Role: `Backend Developer & Software Engineer` or a close variant
+- Supporting line focused on APIs, backend systems, integrations, and products
+- Short paragraph describing backend, scalable web apps, REST APIs, ecommerce, payments, and data-driven work
+- CTAs for work, GitHub, and LinkedIn
+- One restrained technical visual element
 
-Recommended style:
+Avoid generic hero copy and decorative noise.
 
-* Dark theme as the primary experience
-* Optional light mode only if it fits naturally
-* Deep charcoal / near-black background
-* Neutral text
-* One carefully chosen accent color
-* Strong typography
-* Subtle grid, code, or technical visual elements
-* Smooth but restrained animations
+### 3. Quick Profile
 
-The website should feel like a developer's personal product rather than a resume placed on a webpage.
+Use a compact strip or card cluster highlighting focus areas such as:
 
----
+- Backend Systems
+- REST APIs
+- Laravel
+- Payment Integrations
+- Full-Stack Applications
+- Data and Machine Learning
 
-# Navigation
+Only include numeric stats if they come from reliable local or fetched data.
 
-Create a sticky navigation bar.
+### 4. About
 
-Navigation items:
+Explain the professional narrative in a concise, human tone:
 
-* Home
-* About
-* Work
-* Experience
-* Skills
-* Contact
+- Started in web development and expanded into full-stack delivery
+- Strong practical PHP and Laravel experience
+- Work across React, Next.js, Flutter, APIs, and integrations
+- Interest in architecture, databases, AI, and machine learning
+- Continuous learning through practical projects
 
-Include:
+Optional supporting UI:
 
-* GitHub link
-* LinkedIn link
-* Resume/CV download if an existing resume is available
-* Mobile responsive navigation
+- Focus-area list
+- Small timeline
+- Currently exploring callout
 
-The active section should be clearly indicated.
-
----
-
-# 1. HERO SECTION
-
-Create a strong, visually impressive hero section.
-
-Main content:
-
-# Roohan Khan
-
-Suggested role:
-
-Backend Developer & Software Engineer
-
-Alternative supporting line:
-
-I build APIs, backend systems, integrations, and complete digital products.
-
-Include a short paragraph similar in meaning to:
-
-> Backend-focused developer with experience building scalable web applications, REST APIs, ecommerce systems, payment integrations, and data-driven applications. I work primarily with PHP and Laravel while exploring modern backend architecture, AI, and data technologies.
-
-Include clear CTAs:
-
-* View My Work
-* GitHub
-* LinkedIn
-
-The hero section should immediately establish what Roohan does.
-
-Do not use generic text like:
-
-"Turning ideas into reality through code."
-
-The copy should be specific.
-
-Add a subtle technical visual element, such as:
-
-* abstract API/data-flow visualization
-* interactive developer grid
-* code-inspired animation
-* subtle terminal interface
-* architecture visualization
-
-Do not make it distracting.
-
----
-
-# 2. QUICK PROFILE / STATS
-
-Below the hero, add a compact section highlighting areas of work.
-
-Possible items:
-
-* Backend Systems
-* REST APIs
-* Laravel
-* Payment Integrations
-* Full-Stack Applications
-* Data & Machine Learning
-
-You may also include GitHub/project statistics if reliable data is available from the profiles.
-
-Do not invent statistics.
-
----
-
-# 3. ABOUT SECTION
-
-Create an About section that explains the developer journey.
-
-The tone should be professional and human.
-
-Key themes:
-
-* Backend-focused software development
-* Started with web development and expanded into full-stack work
-* Strong practical experience with Laravel and PHP
-* Experience working with React, Next.js, Flutter, and APIs
-* Experience integrating external services
-* Interest in databases, architecture, AI, and machine learning
-* Continuous learner who explores new technologies through projects
-
-Avoid a long biography.
-
-Create a visually interesting layout with:
-
-* Short written introduction
-* Key focus areas
-* Optional timeline
-* Optional "Currently exploring" section
-
-Potential current learning areas:
-
-* Backend architecture
-* NestJS
-* Advanced Laravel
-* Software design principles
-* APIs and integrations
-* System design
-* AI-enabled applications
-
----
-
-# 4. FEATURED PROJECTS
+### 5. Featured Work
 
 This is the most important section.
 
-Do not simply display every repository.
+- Show approximately 4 to 6 selected projects
+- Prioritize backend systems, ecommerce, payment/integration work, enterprise/admin platforms, and strong data projects
+- Each project must include:
+  - Name
+  - One-sentence summary
+  - Problem solved
+  - Tech stack
+  - Engineering challenges or technical decisions
+  - GitHub link if valid
+  - Demo link if valid
+- Include a clear `View Case Study` interaction even if the initial implementation keeps the case study inline or lightweight
 
-Review available GitHub repositories and select approximately 4 to 6 of the strongest and most relevant projects.
+Do not fabricate project content. If details are incomplete, keep the card tighter instead of guessing.
 
-Potential project categories based on Roohan's work include:
+### 6. Technical Stack
 
-### Ecommerce / Backend Systems
+Group skills by capability instead of showing a wall of badges.
 
-Projects involving:
+Required groups:
 
-* Laravel
-* REST APIs
-* Authentication
-* Checkout systems
-* Orders
-* Cart management
-* Payment integrations
-* Admin panels
+- Backend
+- Frontend
+- Databases
+- Mobile
+- Data and AI
+- Tools and Infrastructure
 
-### Payment Integrations
+The UI may be expandable, tabbed, or segmented, but it must remain restrained and readable.
 
-Highlight work involving:
+### 7. Engineering Approach
 
-* SafePay
-* JazzCash testing/integration
-* CyberSource or payment microforms
-* Payment webhooks
-* Secure checkout architecture
+Create a section that explains how Roohan builds software.
 
-The case study should explain the engineering problem rather than only listing technologies.
+Suggested progression:
 
-### BER Portal / Enterprise Applications
+- Understand the problem
+- Design the system
+- Model the data
+- Build the API
+- Integrate services
+- Test the workflow
+- Improve maintainability
 
-Highlight work involving:
+This section should reinforce engineering judgment and backend identity.
 
-* Laravel
-* React
-* PostgreSQL
-* Admin queues
-* Industry updates
-* Legacy application modernization
+### 8. Experience
 
-### Machine Learning / Data Projects
+- Use a clean timeline or stacked layout
+- Include only verified roles, dates, and responsibilities
+- If public data is limited, keep the section concise
+- Do not invent employers or timelines
 
-Examples may include:
+### 9. Currently Exploring
 
-* House Price Prediction
-* Pakistan Stock Exchange / KSE100 analysis
-* Spotify analysis
-* Random Forest
-* XGBoost
-* Pandas
-* Scikit-learn
+Present focused growth areas, for example:
 
-### WordPress / Ecommerce Work
+- NestJS
+- System design
+- Advanced Laravel architecture
+- AI-enabled applications
+- Data engineering
+- Cloud architecture
 
-If appropriate, include selected real-world ecommerce work such as:
+Frame this as active growth, not lack of specialization.
 
-* Roadmaster
-* Bachpan Bazaar
+### 10. GitHub Activity
 
-Focus on implementation and business value rather than presenting WordPress as the main professional identity.
+- Distinguish personal and work GitHub presence when data supports it
+- Prefer selected repositories or technology summaries over brittle scraped activity widgets
+- Do not expose private repositories or uncertain data
 
----
+### 11. Contact
 
-## Project card requirements
+- Strong closing CTA
+- GitHub and LinkedIn links
+- Email only if confirmed and appropriate
+- No fake contact form
+- If no mail backend exists, use `mailto:` or keep the form out of scope for now
 
-Each project should include:
-
-* Project name
-* Short description
-* Problem solved
-* Technology stack
-* Key engineering challenges
-* GitHub link where appropriate
-* Live demo where appropriate
-* Featured image or visual representation
-
-Do not invent project details.
-
-Each project should have a "View Case Study" interaction.
-
-If a detailed project page is created, structure it around:
-
-1. The problem
-2. The solution
-3. Architecture
-4. Technologies
-5. Key technical decisions
-6. Challenges
-7. Outcome
-8. Links
-
-The portfolio should demonstrate engineering thinking, not just finished screenshots.
-
----
-
-# 5. TECHNICAL STACK
-
-Do not create a massive wall of technology logos.
-
-Group technologies by capability.
-
-## Backend
-
-* PHP
-* Laravel
-* NestJS / Node.js if relevant to current work
-* REST APIs
-* Authentication
-* API Development
-* Third-party Integrations
-
-## Frontend
-
-* JavaScript
-* TypeScript
-* React
-* Next.js
-* Tailwind CSS
-* Angular where relevant
-
-## Databases
-
-* MySQL
-* PostgreSQL
-* MongoDB
-* SQL
-
-## Mobile
-
-* Flutter
-
-## Data & AI
-
-* Python
-* Pandas
-* Scikit-learn
-* XGBoost
-* Random Forest
-* Data Analysis
-
-## Tools & Infrastructure
-
-* Git
-* GitHub
-* Postman
-* AWS S3
-* Docker if actually used
-* CI/CD only if supported by actual experience
-
-Do not display technologies that Roohan cannot reasonably discuss.
-
-Use an interactive but restrained UI.
-
-Possible interaction:
-
-Clicking a category expands relevant tools and shows a short explanation of how Roohan uses them.
-
----
-
-# 6. ENGINEERING APPROACH
-
-Create a distinctive section that communicates how Roohan approaches development.
-
-Possible title:
-
-## How I Build Software
-
-Use a flow such as:
-
-Understand the problem
-→ Design the system
-→ Build the API
-→ Structure the database
-→ Integrate services
-→ Test the workflow
-→ Improve the system
-
-This section should reinforce a backend/system-building identity.
-
-Potential themes:
-
-* Clear architecture
-* Maintainable code
-* API-first thinking
-* Database design
-* Separation of concerns
-* Third-party integrations
-* Security and validation
-* Continuous improvement
-
----
-
-# 7. EXPERIENCE
-
-Create a clean experience timeline.
-
-Use accurate information from LinkedIn and the work GitHub profile.
-
-Potential experience categories:
-
-* Professional software development
-* Freelance development
-* Private tuition if appropriate
-* Relevant technical projects
-
-For each role:
-
-* Company or organization
-* Role
-* Time period
-* Short description
-* Key responsibilities
-* Technologies
-
-Do not invent employers, dates, titles, or responsibilities.
-
-If the LinkedIn profile contains limited public information, keep the section concise rather than fabricating details.
-
----
-
-# 8. CURRENTLY EXPLORING
-
-Create a modern section showing that the portfolio is actively evolving.
-
-Possible items:
-
-* NestJS
-* System Design
-* Advanced Laravel Architecture
-* AI-enabled Applications
-* Data Engineering
-* Cloud Architecture
-
-This section should not make Roohan look unfocused.
-
-Present it as:
-
-> Areas I am actively expanding into.
-
----
-
-# 9. GITHUB ACTIVITY
-
-Create a GitHub-focused section.
-
-If live GitHub data can be safely fetched:
-
-* Show contribution/activity information
-* Show selected repositories
-* Show repository languages
-* Show recent meaningful work
-
-Avoid unreliable scraping.
-
-If necessary, use static data based on selected repositories.
-
-Include links to:
-
-Personal GitHub:
-https://github.com/roohankhan8
-
-Work GitHub:
-https://github.com/roohankhan-klabs
-
-Clearly distinguish between:
-
-* Personal projects and experiments
-* Professional/work repositories
-
-Do not expose private information or repositories.
-
----
-
-# 10. CONTACT SECTION
-
-Create a strong closing section.
-
-Suggested heading:
-
-## Let's Build Something Useful
-
-Alternative:
-
-## Have a Project in Mind?
+### 12. Footer
 
 Include:
 
-* LinkedIn
-* GitHub
-* Email if available and appropriate
-* Contact form if the project already has a backend or email service configured
+- Roohan Khan
+- Backend Developer & Software Engineer
+- GitHub link
+- LinkedIn link
+- Optional `Built with Next.js`
 
-Do not implement a fake contact form.
+## Implementation Constraints
 
-If no backend/email provider exists, either:
+- Use server components by default
+- Add client components only where interaction requires them
+- Keep the site as a single-page experience unless project case-study routing becomes necessary
+- Reuse shared data structures for projects, skills, experience, and social links
+- Prefer clean section components over one large page file
+- Avoid unnecessary dependencies
+- Respect reduced-motion preferences
+- Maintain semantic HTML and accessible focus states
+- Ensure mobile-first responsiveness
 
-* Use mailto, or
-* Clearly prepare the architecture for a future contact API
+## Expected File Direction
 
-The final CTA should be direct and professional.
+Target structure should stay simple and reusable. A likely direction:
 
----
+- `app/page.tsx` for page composition
+- `app/layout.tsx` for metadata and shell setup
+- `app/globals.css` for tokens, utilities, and global styling
+- `app/_components/` for reusable sections and UI primitives
+- `app/_lib/` for typed content data
 
-# FOOTER
+Exact names may be adjusted if a clearer structure emerges, but repeated content must not be hardcoded across multiple components.
 
-Include:
+## Content Rules
 
-Roohan Khan
+- Do not invent project facts
+- Do not invent experience details
+- Do not invent GitHub statistics
+- Do not add placeholder lorem ipsum
+- If a section lacks enough verified content, design for brevity rather than filler
 
-Backend Developer & Software Engineer
+## Research Rules For Later Build
 
-Links:
+When gathering content for implementation:
 
-* GitHub
-* LinkedIn
+- Use reliable public sources only
+- Prioritize GitHub and any locally available resume or content files
+- Use LinkedIn only for information that is clearly visible and verifiable
+- Keep a factual boundary between confirmed information and inferred positioning
 
-Optional:
+## Delivery Standard
 
-Built with Next.js.
+The finished portfolio should quickly answer:
 
----
+- Who is Roohan Khan?
+- What does he specialize in?
+- What has he built?
+- What problems can he solve?
+- What technologies does he actually use?
+- How can someone contact him?
 
-# Technical implementation requirements
-
-Use the existing project conventions wherever possible.
-
-Requirements:
-
-* Next.js
-* TypeScript
-* Tailwind CSS if already configured or appropriate
-* Reusable components
-* Responsive design
-* Mobile-first implementation
-* Accessibility considerations
-* Semantic HTML
-* Proper metadata
-* SEO-friendly page structure
-* Open Graph metadata
-* Clean component architecture
-* Avoid unnecessary client components
-* Optimize images
-* Respect reduced-motion preferences
-
-Use server components by default.
-
-Use client components only where interactivity requires them.
-
-Potential component structure:
-
-components/
-layout/
-ui/
-sections/
-projects/
-icons/
-
-sections/
-Hero
-About
-Projects
-Skills
-EngineeringApproach
-Experience
-CurrentlyExploring
-GitHub
-Contact
-
-Create reusable data structures for:
-
-* Projects
-* Skills
-* Experience
-* Social links
-
-Avoid hardcoding repeated content directly across multiple components.
-
----
-
-# Animation requirements
-
-Use subtle motion.
-
-Potential animations:
-
-* Fade-in on scroll
-* Slight upward movement
-* Staggered project cards
-* Subtle hover interactions
-* Smooth section transitions
-
-Avoid:
-
-* Excessive parallax
-* Large bouncing elements
-* Constant animations
-* Long entrance animations
-* Animation that reduces performance
-
-Respect prefers-reduced-motion.
-
----
-
-# Quality requirements
-
-Before considering the implementation complete:
-
-1. Test the application locally.
-2. Check mobile layouts.
-3. Check tablet layouts.
-4. Check desktop layouts.
-5. Fix overflow issues.
-6. Fix hydration issues.
-7. Fix TypeScript errors.
-8. Fix ESLint errors where applicable.
-9. Verify all navigation links.
-10. Verify external links.
-11. Verify GitHub repository links.
-12. Verify responsive navigation.
-13. Check performance.
-14. Check accessibility basics.
-15. Do not leave placeholder text unless explicitly necessary.
-16. Do not invent experience, achievements, statistics, or project details.
-
----
-
-# Final design philosophy
-
-The final portfolio should make a recruiter, client, or technical lead understand within seconds:
-
-Who is Roohan Khan?
-What does he specialize in?
-What has he built?
-What kind of problems can he solve?
-What technologies does he actually use?
-How can someone contact him?
-
-The strongest message should be:
-
-> Roohan is a backend-focused developer with practical experience building real applications, APIs, integrations, ecommerce systems, and data-driven projects.
-
-Do not make the website look like a student portfolio.
-
-Do not make it look like a generic AI-generated portfolio.
-
-Make it feel like a polished, evolving portfolio of a developer who is actively becoming a stronger software engineer.
-
-Start by auditing the existing project and proposing the implementation structure. Then implement the portfolio section by section. After implementation, provide a concise summary of:
-
-* files created or changed
-* key design decisions
-* packages added
-* features implemented
-* any information that still needs to be supplied manually
+If any section weakens that clarity, reduce it or simplify it.
