@@ -19,4 +19,19 @@ describe("getSkillPreviewItems", () => {
       ),
     ).toEqual(["Laravel", "React"]);
   });
+
+  it("supports the updated frontend and workflow stack labels", () => {
+    expect(
+      getSkillPreviewItems(
+        ["Vue", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
+        6,
+      ),
+    ).toEqual(["Vue", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"]);
+
+    expect(getSkillPreviewItems(["Codex", "GitHub", "Postman"], 3)).toEqual([
+      "Codex",
+      "GitHub",
+      "Postman",
+    ]);
+  });
 });

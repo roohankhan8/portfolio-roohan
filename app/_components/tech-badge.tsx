@@ -29,17 +29,18 @@ export function TechBadge({
   const iconClass = size === "md" ? "h-[1.125rem] w-[1.125rem]" : "h-4 w-4";
   const textClass = size === "md" ? "text-xs tracking-[0.12em]" : "text-[11px] tracking-[0.14em]";
   const hasIcon = getTechIcon(item) !== null;
-  const labelClass = hasIcon && !previewOnly
+  const labelClass = hasIcon
     ? `max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-300 ease-out group-hover/tech:max-w-40 group-hover/tech:pl-3 group-hover/tech:opacity-100 ${textClass}`
     : textClass;
-  const paddingClass = previewOnly && hasIcon ? "w-10 justify-center px-0" : "px-4";
-  const wrapperClass = previewOnly && hasIcon ? "tech-badge-icon-only" : "";
+  const paddingClass = previewOnly && hasIcon
+    ? "max-w-10 justify-start px-3 group-hover/tech:max-w-40 group-hover/tech:pr-4"
+    : "px-4";
 
   return (
     <div
       title={item}
       aria-label={item}
-      className={`group/tech inline-flex ${heightClass} items-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--chip-bg)] font-mono uppercase text-[var(--text-secondary)] shadow-[var(--chip-shadow)] transition-all duration-300 ease-out hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)] ${paddingClass} ${wrapperClass} ${className}`}
+      className={`group/tech inline-flex ${heightClass} items-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--chip-bg)] font-mono uppercase text-[var(--text-secondary)] shadow-[var(--chip-shadow)] transition-all duration-300 ease-out hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)] ${paddingClass} ${className}`}
     >
       <BadgeIcon item={item} className={`${iconClass} shrink-0`} />
       <span className={labelClass}>

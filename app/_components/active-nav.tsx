@@ -20,8 +20,8 @@ import type { IconType } from "react-icons";
 import type { NavItem, SocialLink } from "../_lib/portfolio-data";
 import logoTransparent from "../_logos/logo-transparent.png";
 import {
+  getInitialTheme,
   getThemeToggleLabel,
-  getThemeValue,
   getToggledTheme,
   THEME_STORAGE_KEY,
   type Theme,
@@ -45,11 +45,14 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
   const [activeHref, setActiveHref] = useState(items[0]?.href ?? "#home");
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window === "undefined") {
+    if (typeof document === "undefined" || typeof window === "undefined") {
       return "light";
     }
 
-    return getThemeValue(window.localStorage.getItem(THEME_STORAGE_KEY));
+    return getInitialTheme(
+      document.documentElement.dataset.theme,
+      window.localStorage.getItem(THEME_STORAGE_KEY),
+    );
   });
 
   useEffect(() => {
@@ -91,6 +94,15 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
 
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    setTheme(
+      getInitialTheme(
+        document.documentElement.dataset.theme,
+        window.localStorage.getItem(THEME_STORAGE_KEY),
+      ),
+    );
   }, []);
 
   useEffect(() => {

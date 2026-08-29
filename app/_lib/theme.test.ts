@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { getThemeToggleLabel, getThemeValue, getToggledTheme } from "./theme";
+import {
+  getInitialTheme,
+  getThemeToggleLabel,
+  getThemeValue,
+  getToggledTheme,
+} from "./theme";
 
 describe("theme helpers", () => {
   it("falls back to light for unknown values", () => {
@@ -21,5 +26,11 @@ describe("theme helpers", () => {
   it("describes the next toggle action", () => {
     expect(getThemeToggleLabel("light")).toBe("Switch to dark theme");
     expect(getThemeToggleLabel("dark")).toBe("Switch to light theme");
+  });
+
+  it("prefers the current document theme over stored state", () => {
+    expect(getInitialTheme("dark", "light")).toBe("dark");
+    expect(getInitialTheme(undefined, "dark")).toBe("dark");
+    expect(getInitialTheme("sepia", null)).toBe("light");
   });
 });

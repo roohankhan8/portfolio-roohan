@@ -156,32 +156,32 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
     summary: "Primary lane: Laravel application development spanning APIs, database design, RBAC, admin workflows, and maintainable backend architecture.",
-    items: ["PHP", "Laravel", "REST APIs", "Authentication", "Authorization", "RBAC", "MVC Architecture", "Eloquent ORM"],
+    items: ["PHP", "Laravel", "REST APIs", "Authentication", "Authorization", "MVC Architecture", "Eloquent ORM"],
   },
   {
     title: "Frontend",
-    summary: "Used pragmatically when product delivery needs it, especially for Blade-based product views, admin surfaces, and connected web applications.",
-    items: ["HTML5", "CSS3", "JavaScript", "Blade Templating", "Blade Components", "Responsive Admin UI", "React", "Next.js", "Vue.js", "Tailwind CSS"],
+    summary: "Frontend stack used for modern interfaces, responsive product work, and shipping complete web experiences when the product needs it.",
+    items: ["Vue", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     title: "Mobile",
-    summary: "Comfortable working with API-connected application flows beyond the web stack.",
-    items: ["Flutter", "Flutter APIs"],
+    summary: "Mobile technologies used for API-connected application flows across cross-platform product work.",
+    items: ["React Native", "Flutter"],
   },
   {
     title: "Data and AI",
-    summary: "Applied ML work plus newer AI workflow experimentation, with Python still part of the working toolkit.",
-    items: ["Python", "Pandas", "Scikit-learn", "XGBoost", "LangChain", "OpenAI", "Embeddings"],
+    summary: "Data and AI work grounded in practical Python analysis, visualization, and experimentation workflows.",
+    items: ["Pandas", "NumPy", "Matplotlib"],
   },
   {
     title: "Tools and Workflow",
-    summary: "Workflow and delivery tools used for version control, debugging, testing, documentation, and collaborative product development.",
-    items: ["Git", "GitHub", "Pest", "Unit Testing", "Debugging", "Code Reviews", "Technical Documentation", "Third-Party API Integration", ".NET Core"],
+    summary: "Tools used for building, debugging, collaborating, and moving product work from implementation into delivery.",
+    items: ["Codex", "GitHub", "Postman"],
   },
   {
     title: "Data Stores",
-    summary: "Experience working with relational modeling, query optimization, and practical persistence choices across projects.",
-    items: ["MySQL", "MongoDB", "Firebase", "SQL", "Relational Data Modeling", "Query Optimization"],
+    summary: "Primary databases used across application work, spanning relational systems and document-oriented storage.",
+    items: ["MySQL", "PostgreSQL", "MongoDB"],
   },
 ];
 
