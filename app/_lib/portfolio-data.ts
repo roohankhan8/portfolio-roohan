@@ -114,23 +114,23 @@ export const socialLinks: SocialLink[] = [
 export const focusAreas: FocusArea[] = [
   {
     label: "Backend Systems",
-    description: "Laravel-first application design with maintainable service and data layers.",
+    description: "Service-oriented backend work across frameworks, APIs, and maintainable system boundaries.",
   },
   {
-    label: "REST APIs",
-    description: "Structured endpoints for auth, stateful workflows, and third-party integrations.",
+    label: "Frontend",
+    description: "Responsive interfaces spanning component systems, app shells, and product-facing frontend delivery.",
   },
   {
-    label: "Payment Integrations",
-    description: "Checkout logic, payment handling, and secure product delivery flows.",
+    label: "Payment Integration",
+    description: "Checkout flows, gateway handling, and reliable payment-state management across products.",
   },
   {
-    label: "Full-Stack Delivery",
-    description: "Shipping complete products with React, Next.js, and pragmatic frontend layers.",
+    label: "AI",
+    description: "AI-assisted workflows and local tooling used to speed delivery, exploration, and product implementation.",
   },
   {
     label: "Data and ML",
-    description: "Applied machine learning projects with preprocessing, feature engineering, and evaluation.",
+    description: "Python-led analysis, applied ML, business reporting, and practical data tooling.",
   },
 ];
 
