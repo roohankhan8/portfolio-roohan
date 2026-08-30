@@ -53,13 +53,13 @@ export function HeroSection() {
               </a>
             ))}
           </div>
-          <ul className="flex flex-wrap gap-3">
+          {/* <ul className="flex flex-wrap gap-3">
             {highlightedStack.map((item) => (
               <li key={item}>
                 <TechBadge item={item} size="md" />
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
         <div className="space-y-5">
           <Hero3DScene />

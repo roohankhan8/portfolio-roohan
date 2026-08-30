@@ -28,7 +28,7 @@ export function SkillsSection() {
                 <ul className="flex flex-wrap gap-2 group-open:hidden">
                   {getSkillPreviewItems(group.items).map((item) => (
                     <li key={`${group.title}-${item}`}>
-                      <TechBadge item={item} previewOnly />
+                      <TechBadge item={item} />
                     </li>
                   ))}
                 </ul>

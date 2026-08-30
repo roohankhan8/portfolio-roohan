@@ -11,4 +11,11 @@ describe("SkillsSection", () => {
 
     expect(previewLists[0]?.className).toContain("group-open:hidden");
   });
+
+  it("uses the standard hover-reveal badges in closed card previews", () => {
+    const { container } = render(<SkillsSection />);
+    const frontendBadge = container.querySelector('summary [aria-label="Vue"]');
+
+    expect(frontendBadge?.className).not.toContain("max-w-10");
+  });
 });
