@@ -1,6 +1,25 @@
 "use client";
 
 import { useState, type CSSProperties, type PointerEvent } from "react";
+import type { IconType } from "react-icons";
+import {
+  FaBolt,
+  FaBrain,
+  FaChartBar,
+  FaChartLine,
+  FaCloud,
+  FaCode,
+  FaCompassDrafting,
+  FaCreditCard,
+  FaDatabase,
+  FaFileExcel,
+  FaMoneyBillWave,
+  FaRobot,
+  FaShieldHalved,
+  FaTableCellsLarge,
+  FaWandMagicSparkles,
+} from "react-icons/fa6";
+import { SiGoogleanalytics, SiMongodb, SiNumpy, SiPandas, SiPython, SiScikitlearn, SiSqlite } from "react-icons/si";
 
 import { focusAreas } from "../_lib/portfolio-data";
 import { getTechIcon } from "../_lib/tech-icons";
@@ -23,6 +42,32 @@ const focusAreaBadges: Record<string, string[]> = {
   ],
 };
 
+const focusAreaIconOverrides: Record<string, Record<string, IconType>> = {
+  "Payment Integration": {
+    Stripe: FaCreditCard,
+    "Tap Payment": FaBolt,
+    Safepay: FaShieldHalved,
+  },
+  AI: {
+    Claude: FaWandMagicSparkles,
+    Codex: FaCode,
+    Ollama: FaCloud,
+    Copilot: FaCompassDrafting,
+    OpenClaw: FaRobot,
+  },
+  "Data and ML": {
+    Python: SiPython,
+    Pandas: SiPandas,
+    Matplotlib: FaChartLine,
+    NumPy: SiNumpy,
+    "scikit-learn": SiScikitlearn,
+    Excel: FaFileExcel,
+    "Power BI": FaChartBar,
+    SQL: SiSqlite,
+    MongoDB: SiMongodb,
+  },
+};
+
 type PointerState = {
   active: boolean;
   height: number;
@@ -39,7 +84,7 @@ const idlePointer: PointerState = {
   y: 0,
 };
 
-function LogoField({ names }: { names: string[] }) {
+function LogoField({ areaLabel, names }: { areaLabel: string; names: string[] }) {
   const [pointer, setPointer] = useState<PointerState>(idlePointer);
 
   function handlePointerMove(event: PointerEvent<HTMLDivElement>) {
@@ -71,7 +116,7 @@ function LogoField({ names }: { names: string[] }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.7),transparent_60%)]" />
       <div className="absolute inset-x-3 top-3 h-px bg-[linear-gradient(90deg,transparent,color-mix(in_srgb,var(--accent)_35%,transparent),transparent)]" />
       {names.map((name, index) => {
-        const Icon = getTechIcon(name);
+        const Icon = focusAreaIconOverrides[areaLabel]?.[name] ?? getTechIcon(name);
 
         if (!Icon) {
           return null;
@@ -86,13 +131,14 @@ function LogoField({ names }: { names: string[] }) {
         const deltaX = anchorXPx - pointer.x;
         const deltaY = anchorYPx - pointer.y;
         const distance = Math.hypot(deltaX, deltaY) || 1;
-        const influence = pointer.active ? Math.max(0, 1 - distance / 148) : 0;
-        const escapeX = (deltaX / distance) * influence * 40;
-        const escapeY = (deltaY / distance) * influence * 30;
+        const influence = pointer.active ? Math.max(0, 1 - distance / 180) : 0;
+        const escapeX = (deltaX / distance) * influence * 56;
+        const escapeY = (deltaY / distance) * influence * 40;
+        const scale = pointer.active ? 1 + influence * 0.14 : 1;
         const shellStyle: CSSProperties = {
           left: `${anchorX}%`,
           top: `${anchorY}%`,
-          transform: `translate(calc(-50% + ${escapeX}px), calc(-50% + ${escapeY}px))`,
+          transform: `translate(calc(-50% + ${escapeX}px), calc(-50% + ${escapeY}px)) scale(${scale})`,
           zIndex: pointer.active ? Math.round(100 - distance) : 1,
         };
         const driftStyle: CSSProperties = {
@@ -100,16 +146,21 @@ function LogoField({ names }: { names: string[] }) {
           animationDuration: `${6.8 + (index % 4) * 1.2}s`,
         };
         const tilt = column % 2 === 0 ? -7 : 7;
+        const glowStyle: CSSProperties = {
+          boxShadow: pointer.active && influence > 0
+            ? `0 16px 30px rgba(16,32,51,0.14), 0 0 ${18 + influence * 18}px color-mix(in srgb, var(--accent) 28%, transparent)`
+            : "0 12px 26px rgba(16,32,51,0.1)",
+        };
 
         return (
           <span
             key={name}
-            className="absolute transition-transform duration-150 ease-out will-change-transform"
+            className="absolute transition-transform duration-75 ease-out will-change-transform"
             style={shellStyle}
           >
             <span
-              className="focus-strip-logo-node flex h-11 w-11 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--chip-bg)] text-[var(--accent)] shadow-[0_12px_26px_rgba(16,32,51,0.1)]"
-              style={driftStyle}
+              className="focus-strip-logo-node flex h-11 w-11 items-center justify-center rounded-2xl border border-[color:var(--border)] bg-[color:var(--chip-bg)] text-[var(--accent)]"
+              style={{ ...driftStyle, ...glowStyle }}
               title={name}
             >
               <Icon
@@ -161,7 +212,7 @@ export function FocusStrip() {
               key={area.label}
               className="surface-panel rounded-2xl p-5 transition-transform hover:-translate-y-1"
             >
-              <LogoField names={focusAreaBadges[area.label] ?? []} />
+              <LogoField areaLabel={area.label} names={focusAreaBadges[area.label] ?? []} />
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
                 {area.label}
               </p>

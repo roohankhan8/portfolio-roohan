@@ -231,7 +231,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
               })}
             </nav>
             <div className="mt-4 flex flex-wrap gap-2">
-              <button
+              {/* <button
                 type="button"
                 aria-label={getThemeToggleLabel(theme)}
                 onClick={() => setTheme((currentTheme) => getToggledTheme(currentTheme))}
@@ -239,7 +239,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
               >
                 {theme === "light" ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
                 <span>{theme === "light" ? "Dark mode" : "Light mode"}</span>
-              </button>
+              </button> */}
               {socials.map((social) => (
                 <a
                   key={social.href}
