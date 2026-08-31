@@ -4,18 +4,19 @@ import { SectionHeading } from "./section-heading";
 export function GitHubSection() {
   return (
     <section className="section-block">
-      <div className="container-shell space-y-10">
+      <div className="container-shell flex flex-col items-center gap-10">
         <SectionHeading
+          align="center"
           title="Public work that gives teams another way to evaluate how I build."
           description="Beyond the portfolio itself, these public channels help organizations review code presence, project consistency, and the kind of work I choose to share openly."
         />
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="w-full max-w-4xl gap-4 lg:grid-cols-2">
           {githubSummaries.map((summary) => (
             <article
               key={summary.href}
               className="surface-panel rounded-[1.5rem] p-6"
             >
-              <div className="flex items-start justify-between gap-6">
+              <div className="flex flex-col items-center gap-4 text-center">
                 <div className="space-y-3">
                   <p className="font-mono text-xs uppercase tracking-[0.22em] text-[var(--accent)]">
                     {summary.label}
@@ -33,7 +34,7 @@ export function GitHubSection() {
                   Visit
                 </a>
               </div>
-              <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <dl className="mt-6 grid grid-cols-2 gap-4 text-center sm:grid-cols-4">
                 <div className="stat-card rounded-2xl border border-[var(--border)] p-4">
                   <dt className="font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--text-muted)]">
                     Repos
