@@ -64,25 +64,26 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+    const updateActiveSection = () => {
+      const activationLine = window.innerHeight * 0.35;
+      const activeSection =
+        [...sections]
+          .reverse()
+          .find((section) => section.getBoundingClientRect().top <= activationLine) ?? sections[0];
 
-        if (visibleEntry?.target.id) {
-          setActiveHref(`#${visibleEntry.target.id}`);
-        }
-      },
-      {
-        rootMargin: "-35% 0px -45% 0px",
-        threshold: [0.2, 0.4, 0.6],
-      },
-    );
+      setActiveHref(`#${activeSection.id}`);
+    };
 
-    sections.forEach((section) => observer.observe(section));
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    window.addEventListener("hashchange", updateActiveSection);
 
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+      window.removeEventListener("hashchange", updateActiveSection);
+    };
   }, [items]);
 
   useEffect(() => {
@@ -146,6 +147,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   <a
                     key={item.href}
                     href={item.href}
+                    onClick={() => setActiveHref(item.href)}
                     className={`nav-pill group flex h-11 items-center overflow-hidden rounded-full border px-4 transition-all duration-300 ease-out ${
                       isActive
                         ? "nav-pill-active text-[var(--text)]"
@@ -217,7 +219,10 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                   <a
                     key={item.href}
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setActiveHref(item.href);
+                      setIsOpen(false);
+                    }}
                     className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm transition-all duration-300 ease-out ${
                       isActive
                         ? "bg-[linear-gradient(135deg,rgba(78,161,255,0.24),rgba(78,161,255,0.1))] text-[var(--text)]"
