@@ -1,6 +1,7 @@
 import projectData from "./projects.json";
 import type { StaticImageData } from "next/image";
 import bhiveScreenshot from "../_screenshots/bhive.png";
+import bhiveOrderDetailScreenshot from "../_screenshots/bhive-order-detail.jpeg";
 import faz3aClient1Screenshot from "../_screenshots/faz3a-client-1.png";
 import faz3aClient2Screenshot from "../_screenshots/faz3a-client-2.png";
 import faz3aVendor1Screenshot from "../_screenshots/faz3a-vendor-1.png";
@@ -136,6 +137,7 @@ export const focusAreas: FocusArea[] = [
 
 const screenshotAssets: Record<string, StaticImageData> = {
   "bhive.png": bhiveScreenshot,
+  "bhive-order-detail.jpeg": bhiveOrderDetailScreenshot,
   "faz3a-client-1.png": faz3aClient1Screenshot,
   "faz3a-client-2.png": faz3aClient2Screenshot,
   "faz3a-vendor-1.png": faz3aVendor1Screenshot,

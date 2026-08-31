@@ -14,27 +14,27 @@ const highlightedStack = [
 export function HeroSection() {
   return (
     <section id="home" className="section-block pt-16 sm:pt-24">
-      <div className="container-shell grid items-center gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(20rem,0.8fr)]">
-        <div className="space-y-8">
+      <div className="container-shell flex flex-col items-center gap-12 text-center">
+        <div className="max-w-3xl space-y-8">
           <div className="space-y-5">
             {/* <p className="font-mono text-xs uppercase tracking-[0.28em] text-[var(--accent)]">
               [ 01 ] BACKEND ENGINEERING
             </p> */}
             <div className="space-y-4">
-              <h1 className="max-w-5xl text-[clamp(3rem,7vw,5rem)] font-semibold leading-[0.95] tracking-[-0.06em]">
+              <h1 className="text-[clamp(3rem,7vw,5rem)] font-semibold leading-[0.95] tracking-[-0.06em]">
                 Roohan Khan
               </h1>
-              <p className="max-w-3xl text-xl font-medium text-[var(--text)] sm:text-2xl">
+              <p className="text-xl font-medium text-[var(--text)] sm:text-2xl">
                 Backend Developer &amp; Software Engineer
               </p>
-              <p className="max-w-3xl text-lg leading-8 text-[var(--text-secondary)]">
+              <p className="text-lg leading-8 text-[var(--text-secondary)]">
                 I build APIs, backend systems, integrations, and complete
                 digital products with a strong focus on Laravel, scalable web
                 applications, ecommerce workflows, and data-driven software.
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-4 sm:flex-row">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <a
               href="#work"
               className="button-primary inline-flex h-13 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all hover:-translate-y-0.5"
@@ -61,7 +61,7 @@ export function HeroSection() {
             ))}
           </ul> */}
         </div>
-        <div className="space-y-5">
+        <div className="w-full max-w-xl space-y-5">
           <Hero3DScene />
           {/* <div className="hero-scene-caption surface-panel rounded-[1.5rem] p-5">
             <div className="flex items-center justify-between gap-4">

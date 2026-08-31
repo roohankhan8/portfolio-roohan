@@ -29,6 +29,10 @@
       {
         "file": "bhive.png",
         "alt": "Bhive mobile product screen"
+      },
+      {
+        "file": "bhive-order-detail.jpeg",
+        "alt": "Bhive order detail screen"
       }
     ]
   },
@@ -43,7 +47,7 @@
     "highlights": [
       "Worked as a backend engineer across the user booking experience and vendor operations.",
       "Supported separate application flows for customers and service providers.",
-      "Product website: faz3a.io."
+      "Product website: v2.faz3a.io."
     ],
     "demoUrl": "https://faz3a.io/",
     "screenshots": [
@@ -53,9 +57,9 @@
         "label": "Client"
       },
       {
-        "file": "faz3a-client-2.png",
-        "alt": "Faz3a client application service flow screen",
-        "label": "Client"
+        "file": "faz3a-vendor-2.png",
+        "alt": "Faz3a vendor application home screen",
+        "label": "Vendor"
       }
     ]
   },

@@ -167,14 +167,14 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
               })}
             </nav>
             <div className="hidden items-center gap-3 lg:flex">
-              <button
+              {/* <button
                 type="button"
                 aria-label={getThemeToggleLabel(theme)}
                 onClick={() => setTheme((currentTheme) => getToggledTheme(currentTheme))}
                 className="nav-icon-button inline-flex h-10 w-10 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-all duration-300 ease-out hover:text-[var(--text)]"
               >
                 {theme === "light" ? <FaMoon aria-hidden="true" /> : <FaSun aria-hidden="true" />}
-              </button>
+              </button> */}
               {socials.map((social) => (
                 <a
                   key={social.href}
