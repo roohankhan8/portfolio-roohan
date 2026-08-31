@@ -20,6 +20,7 @@ import {
   FaTabletAlt,
 } from "react-icons/fa";
 import {
+  SiAngular,
   SiCss,
   SiDjango,
   SiDotnet,
@@ -54,7 +55,7 @@ const techIcons: Record<string, IconType> = {
   ".NET": SiDotnet,
   ".NET Core": SiDotnet,
   "AI Workflows": FaRobot,
-  Angular: FaLayerGroup,
+  Angular: SiAngular,
   Authentication: FaLock,
   Authorization: FaShieldAlt,
   Blade: SiLaravel,

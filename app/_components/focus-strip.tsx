@@ -109,12 +109,11 @@ function LogoField({ areaLabel, names }: { areaLabel: string; names: string[] })
   return (
     <div
       aria-hidden="true"
-      className="relative mb-4 h-28 overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[linear-gradient(180deg,color-mix(in_srgb,var(--accent)_12%,transparent),transparent)]"
+      className="relative mb-4 h-40 overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[linear-gradient(180deg,color-mix(in_srgb,var(--accent)_12%,transparent),transparent)]"
       onPointerLeave={handlePointerLeave}
       onPointerMove={handlePointerMove}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.7),transparent_60%)]" />
-      <div className="absolute inset-x-3 top-3 h-px bg-[linear-gradient(90deg,transparent,color-mix(in_srgb,var(--accent)_35%,transparent),transparent)]" />
       {names.map((name, index) => {
         const Icon = focusAreaIconOverrides[areaLabel]?.[name] ?? getTechIcon(name);
 
@@ -206,7 +205,7 @@ export function FocusStrip() {
   return (
     <section aria-label="Focus areas" className="pb-4">
       <div className="container-shell">
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <div className="grid gap-4 lg:grid-cols-2">
           {focusAreas.map((area) => (
             <article
               key={area.label}
