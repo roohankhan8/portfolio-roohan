@@ -55,6 +55,7 @@ export function ScrollOrbitBackground() {
       <div className="scroll-orbit-node scroll-orbit-node-a" />
       <div className="scroll-orbit-node scroll-orbit-node-b" />
       <div className="scroll-orbit-node scroll-orbit-node-c" />
+      <div className="scroll-follow-blob" />
       <div className="scroll-orbit-grid" />
     </div>
   );

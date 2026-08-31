@@ -267,6 +267,25 @@ button {
   filter: blur(14px);
 }
 
+.scroll-follow-blob {
+  position: fixed;
+  top: 48%;
+  left: calc(8% + (var(--scroll-progress) * 78%));
+  width: clamp(15rem, 30vw, 30rem);
+  aspect-ratio: 1;
+  border-radius: 45% 55% 60% 40% / 48% 42% 58% 52%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    color-mix(in srgb, var(--accent) 36%, white),
+    color-mix(in srgb, var(--accent) 18%, transparent) 42%,
+    transparent 72%
+  );
+  opacity: calc(0.2 + (var(--scroll-progress) * 0.14));
+  filter: blur(26px);
+  transform: translate(-50%, -50%) rotate(calc(var(--scroll-progress) * 180deg));
+  transition: left 120ms linear, transform 120ms linear;
+}
+
 .scroll-orbit-node-a {
   top: calc(14rem + (var(--orbit-shift) * 0.8));
   left: 6%;
