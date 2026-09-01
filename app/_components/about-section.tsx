@@ -3,12 +3,14 @@ import { SectionHeading } from "./section-heading";
 export function AboutSection() {
   return (
     <section id="about" className="section-block">
-      <div className="container-shell grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(18rem,0.9fr)]">
+      <div className="container-shell gap-10 flex flex-col items-center">
         <SectionHeading
           title="Backend systems built with product thinking, not just API endpoints."
           description="If you need an engineer who can translate requirements into clean backend workflows, durable data models, and maintainable delivery, this section shows the direction and depth behind that work."
+          align="center"
+          align_description="center"
         />
-        <div className="surface-panel rounded-[1.5rem] p-6 sm:p-8">
+        {/* <div className="surface-panel rounded-[1.5rem] p-6 sm:p-8">
           <div className="space-y-6">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
@@ -31,7 +33,7 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
