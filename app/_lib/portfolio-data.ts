@@ -7,6 +7,7 @@ import faz3aClient2Screenshot from "../_screenshots/faz3a-client-2.png";
 import faz3aVendor1Screenshot from "../_screenshots/faz3a-vendor-1.png";
 import faz3aVendor2Screenshot from "../_screenshots/faz3a-vendor-2.png";
 import theberScreenshot from "../_screenshots/theber.png";
+import theberportalScreenshot from "../_screenshots/theber-portal.png";
 
 export type NavItem = {
   label: string;
@@ -22,6 +23,7 @@ export type SocialLink = {
 export type FocusArea = {
   label: string;
   description: string;
+  technologies?: string[];
 };
 
 export type ProjectItem = {
@@ -133,6 +135,11 @@ export const focusAreas: FocusArea[] = [
     label: "Data and ML",
     description: "Python-led analysis, applied ML, business reporting, and practical data tooling.",
   },
+  {
+    label: "Wordpress and CMS",
+    description: "Wordpress and CMS work for content-driven products, marketing sites, and client-facing web experiences.",
+    technologies: ["WordPress", "Statamic", "Shopify"],
+  },
 ];
 
 const screenshotAssets: Record<string, StaticImageData> = {
@@ -143,6 +150,7 @@ const screenshotAssets: Record<string, StaticImageData> = {
   "faz3a-vendor-1.png": faz3aVendor1Screenshot,
   "faz3a-vendor-2.png": faz3aVendor2Screenshot,
   "theber.png": theberScreenshot,
+  "theber-portal.png": theberportalScreenshot,
 };
 
 export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((project) => ({

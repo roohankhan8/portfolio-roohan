@@ -19,7 +19,18 @@ import {
   FaTableCellsLarge,
   FaWandMagicSparkles,
 } from "react-icons/fa6";
-import { SiGoogleanalytics, SiMongodb, SiNumpy, SiPandas, SiPython, SiScikitlearn, SiSqlite } from "react-icons/si";
+import {
+  SiGoogleanalytics,
+  SiMongodb,
+  SiNumpy,
+  SiPandas,
+  SiPython,
+  SiScikitlearn,
+  SiShopify,
+  SiSqlite,
+  SiStatamic,
+  SiWordpress,
+} from "react-icons/si";
 
 import { focusAreas } from "../_lib/portfolio-data";
 import { getTechIcon } from "../_lib/tech-icons";
@@ -65,6 +76,11 @@ const focusAreaIconOverrides: Record<string, Record<string, IconType>> = {
     "Power BI": FaChartBar,
     SQL: SiSqlite,
     MongoDB: SiMongodb,
+  },
+  "Wordpress and CMS": {
+    WordPress: SiWordpress,
+    Statamic: SiStatamic,
+    Shopify: SiShopify,
   },
 };
 
@@ -211,7 +227,7 @@ export function FocusStrip() {
               key={area.label}
               className="surface-panel rounded-2xl p-5 transition-transform hover:-translate-y-1"
             >
-              <LogoField areaLabel={area.label} names={focusAreaBadges[area.label] ?? []} />
+              <LogoField areaLabel={area.label} names={area.technologies ?? focusAreaBadges[area.label] ?? []} />
               <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
                 {area.label}
               </p>

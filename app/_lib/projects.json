@@ -1,49 +1,17 @@
 [
   {
-    "slug": "ai-content-workflow-app",
-    "title": "AI Content Workflow App",
-    "period": "2026",
-    "summary": "Laravel and React application that turns AI generation into a stateful writing workflow instead of a single prompt screen.",
-    "problem": "Create a durable content workspace where briefs, analysis, drafts, conversations, and final output stay connected across the full writing lifecycle.",
-    "stack": ["Laravel 13", "React 19", "Laravel AI", "MySQL", "Pest"],
-    "highlights": [
-      "Used a shared ContentProject model to persist briefs, drafts, model settings, and final output.",
-      "Separated AI agents by workflow responsibility instead of pushing everything through one prompt layer.",
-      "Stored conversation threads, prompt runs, and streaming results to make the product stateful."
-    ]
-  },
-  {
-    "slug": "bhive",
-    "title": "Bhive",
-    "period": "In development",
-    "role": "Backend Engineer",
-    "summary": "Ecommerce platform for Bahrain with support for multiple vendors, currently in development.",
-    "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
-    "stack": ["Laravel", "MySQL", "Nova", "Vue"],
-    "highlights": [
-      "Worked as a backend engineer on the platform's API and product workflows.",
-      "Designed around multiple vendors rather than a single-store commerce model.",
-      "Continuing development toward a Bahrain-focused ecommerce product."
-    ],
-    "screenshots": [
-      {
-        "file": "bhive.png",
-        "alt": "Bhive mobile product screen"
-      },
-      {
-        "file": "bhive-order-detail.jpeg",
-        "alt": "Bhive order detail screen"
-      }
-    ]
-  },
-  {
     "slug": "faz3a",
     "title": "Faz3a",
-    "period": "In development",
+    "period": "Live",
     "role": "Backend Engineer",
     "summary": "Service booking platform for users, paired with a vendor app for service providers.",
     "problem": "Connect customers who need services with vendors who can provide them through coordinated booking, service, and vendor workflows.",
-    "stack": ["Laravel", "Nova", "Vue.js", "MySQL"],
+    "stack": [
+      "Laravel",
+      "Nova",
+      "Vue.js",
+      "MySQL"
+    ],
     "highlights": [
       "Worked as a backend engineer across the user booking experience and vendor operations.",
       "Supported separate application flows for customers and service providers.",
@@ -64,13 +32,50 @@
     ]
   },
   {
+    "slug": "bhive",
+    "title": "Bhive",
+    "period": "In development",
+    "role": "Backend Engineer",
+    "summary": "Ecommerce platform for Bahrain with support for multiple vendors, currently in development.",
+    "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
+    "stack": [
+      "Laravel",
+      "MySQL",
+      "Nova",
+      "Vue"
+    ],
+    "highlights": [
+      "Worked as a backend engineer on the platform's API and product workflows.",
+      "Designed around multiple vendors rather than a single-store commerce model.",
+      "Continuing development toward a Bahrain-focused ecommerce product."
+    ],
+    "screenshots": [
+      {
+        "file": "bhive.png",
+        "alt": "Bhive mobile product screen",
+        "label": "Home"
+      },
+      {
+        "file": "bhive-order-detail.jpeg",
+        "alt": "Bhive order detail screen",
+        "label": "Order Detail"
+      }
+    ]
+  },
+  {
     "slug": "website-support-for-the-ber",
     "title": "The BER backend rebuild",
     "period": "2025 - January 2026",
     "role": "Backend Developer",
     "summary": "Laravel backend rebuild for theber.com focused on modular architecture, role-aware workflows, and production database performance.",
     "problem": "Replace a harder-to-maintain backend with a Laravel application that could support multiple user roles, project lifecycle operations, and a large production data set more reliably.",
-    "stack": ["Laravel", "PHP", "MySQL", "REST APIs", "RBAC"],
+    "stack": [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "REST APIs",
+      "RBAC"
+    ],
     "highlights": [
       "Rebuilt the backend of theber.com using Laravel with a modular, scalable architecture.",
       "Designed role-based access control for builders, raters, modelers, admins, and students.",
@@ -80,8 +85,33 @@
     "screenshots": [
       {
         "file": "theber.png",
-        "alt": "The BER project interface screenshot"
+        "alt": "The BER project interface screenshot",
+        "label": "Landing"
+      },
+      {
+        "file": "theber-portal.png",
+        "alt": "The BER portal interface screenshot",
+        "label": "Portal"
       }
+    ]
+  },
+  {
+    "slug": "ai-content-workflow-app",
+    "title": "AI Content Workflow App",
+    "period": "2026",
+    "summary": "Laravel and React application that turns AI generation into a stateful writing workflow instead of a single prompt screen.",
+    "problem": "Create a durable content workspace where briefs, analysis, drafts, conversations, and final output stay connected across the full writing lifecycle.",
+    "stack": [
+      "Laravel 13",
+      "React 19",
+      "Laravel AI",
+      "MySQL",
+      "Pest"
+    ],
+    "highlights": [
+      "Used a shared ContentProject model to persist briefs, drafts, model settings, and final output.",
+      "Separated AI agents by workflow responsibility instead of pushing everything through one prompt layer.",
+      "Stored conversation threads, prompt runs, and streaming results to make the product stateful."
     ]
   },
   {
@@ -90,7 +120,11 @@
     "period": "Jul 2023 - Jun 2024",
     "summary": "Django-based web application for creating, editing, and managing structured logbook entries collaboratively.",
     "problem": "Give teams and individuals a cleaner way to record activities, processes, and experiments in a shared web workflow.",
-    "stack": ["Django", "Python", "HTML"],
+    "stack": [
+      "Django",
+      "Python",
+      "HTML"
+    ],
     "highlights": [
       "Focused on structured entry management rather than simple note storage.",
       "Designed for collaborative record keeping in web form."
