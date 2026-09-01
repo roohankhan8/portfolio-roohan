@@ -17,17 +17,19 @@
       "Supported separate application flows for customers and service providers.",
       "Product website: v2.faz3a.io."
     ],
-    "demoUrl": "https://faz3a.io/",
+    "demoUrl": "https://play.google.com/store/apps/details?id=com.faz3a.vendor",
     "screenshots": [
       {
         "file": "faz3a-client-1.png",
         "alt": "Faz3a client application home screen",
-        "label": "Client"
+        "label": "Client",
+        "url": "https://play.google.com/store/apps/details?id=com.faz3a.client"
       },
       {
         "file": "faz3a-vendor-2.png",
         "alt": "Faz3a vendor application home screen",
-        "label": "Vendor"
+        "label": "Vendor",
+        "url": "https://play.google.com/store/apps/details?id=com.faz3a.vendor"
       }
     ]
   },
@@ -63,6 +65,37 @@
     ]
   },
   {
+    "slug": "abayty",
+    "title": "Abayty",
+    "period": "Live",
+    "role": "Backend Engineer",
+    "summary": "Custom abaya design app built for women in Bahrain with step-by-step design and ordering workflows.",
+    "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
+    "stack": [
+      "Laravel",
+      "MySQL",
+      "Nova"
+    ],
+    "highlights": [
+      "Worked as a backend engineer on the platform's API and dashboard.",
+      "Designed around seamless experience for women to design and order custom abayas."
+    ],
+    "screenshots": [
+      {
+        "file": "abayty-splash.webp",
+        "alt": "Abayty splash screen",
+        "label": "Home",
+        "url": "https://play.google.com/store/apps/details?id=com.abayty.app"
+      },
+      {
+        "file": "abayty-flow.webp",
+        "alt": "Abayty design flow screen",
+        "label": "Flow",
+        "url": "https://play.google.com/store/apps/details?id=com.abayty.app"
+      }
+    ]
+  },
+  {
     "slug": "website-support-for-the-ber",
     "title": "The BER backend rebuild",
     "period": "2025 - January 2026",
@@ -86,12 +119,14 @@
       {
         "file": "theber.png",
         "alt": "The BER project interface screenshot",
-        "label": "Landing"
+        "label": "Landing",
+        "url": "https://theber.com"
       },
       {
         "file": "theber-portal.png",
         "alt": "The BER portal interface screenshot",
-        "label": "Portal"
+        "label": "Portal",
+        "url": "https://theber.com"
       }
     ]
   },

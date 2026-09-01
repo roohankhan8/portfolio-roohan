@@ -8,6 +8,8 @@ import faz3aVendor1Screenshot from "../_screenshots/faz3a-vendor-1.png";
 import faz3aVendor2Screenshot from "../_screenshots/faz3a-vendor-2.png";
 import theberScreenshot from "../_screenshots/theber.png";
 import theberportalScreenshot from "../_screenshots/theber-portal.png";
+import abaytySplashScreenshot from "../_screenshots/abayty-splash.webp";
+import abaytyFlowScreenshot from "../_screenshots/abayty-flow.webp";
 
 export type NavItem = {
   label: string;
@@ -44,12 +46,14 @@ export type ProjectScreenshot = {
   src: StaticImageData;
   alt: string;
   label?: string;
+  url?: string;
 };
 
 type ProjectScreenshotRecord = {
   file: string;
   alt: string;
   label?: string;
+  url?: string;
 };
 
 type ProjectRecord = Omit<ProjectItem, "screenshots"> & {
@@ -102,11 +106,11 @@ export const socialLinks: SocialLink[] = [
     href: "https://github.com/roohankhan8",
     icon: "github",
   },
-  // {
-  //   label: "Work GitHub",
-  //   href: "https://github.com/roohankhan-klabs",
-  //   icon: "github",
-  // },
+  {
+    label: "Work GitHub",
+    href: "https://github.com/roohankhan-klabs",
+    icon: "github",
+  },
   {
     label: "LinkedIn",
     href: "https://pk.linkedin.com/in/roohan-khan8",
@@ -151,6 +155,8 @@ const screenshotAssets: Record<string, StaticImageData> = {
   "faz3a-vendor-2.png": faz3aVendor2Screenshot,
   "theber.png": theberScreenshot,
   "theber-portal.png": theberportalScreenshot,
+  "abayty-splash.webp": abaytySplashScreenshot,
+  "abayty-flow.webp": abaytyFlowScreenshot,
 };
 
 export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((project) => ({
@@ -159,6 +165,7 @@ export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((pro
     src: screenshotAssets[shot.file],
     alt: shot.alt,
     label: shot.label,
+    url: shot.url,
   })),
 }));
 

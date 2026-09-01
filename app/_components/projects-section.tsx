@@ -2,6 +2,7 @@ import Image from "next/image";
 import { projects } from "../_lib/portfolio-data";
 import { SectionHeading } from "./section-heading";
 import { TechBadge } from "./tech-badge";
+import Link from "next/link";
 
 export function ProjectsSection() {
   return (
@@ -19,11 +20,10 @@ export function ProjectsSection() {
               className="surface-panel rounded-[1.75rem] p-6 sm:p-8"
             >
               <div
-                className={`grid gap-8 ${
-                  project.screenshots?.length
-                    ? "lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.72fr)]"
-                    : "lg:grid-cols-[minmax(0,1fr)]"
-                }`}
+                className={`grid gap-8 ${project.screenshots?.length
+                  ? "lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.72fr)]"
+                  : "lg:grid-cols-[minmax(0,1fr)]"
+                  }`}
               >
                 <div className="space-y-5">
                   <div className="flex flex-wrap items-center gap-3">
@@ -77,33 +77,36 @@ export function ProjectsSection() {
                   </ul>
                 </div>
                 {project.screenshots?.length ? (
+
                   <div className="space-y-4">
                     <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
                       Product View
                     </p>
                     <div className="grid grid-cols-2">
                       {project.screenshots.map((shot) => (
-                        <figure
-                          key={`${project.slug}-${shot.alt}`}
-                          className={`w-full ${project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
-                        >
-                          <div className="project-shot-frame rounded-[2rem] border border-[var(--border-strong)] p-2">
-                            <div className="project-shot-inner relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem]">
-                              <Image
-                                src={shot.src}
-                                alt={shot.alt}
-                                fill
-                                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
-                                className="object-cover object-top"
-                              />
+                        <Link href={shot.url ?? project.demoUrl ?? "#"} key={`${project.slug}-${shot.alt}`} className="group">
+                          <figure
+                            key={`${project.slug}-${shot.alt}`}
+                            className={`w-full ${project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
+                          >
+                            <div className="project-shot-frame rounded-[2rem] border border-[var(--border-strong)] p-2">
+                              <div className="project-shot-inner relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem]">
+                                <Image
+                                  src={shot.src}
+                                  alt={shot.alt}
+                                  fill
+                                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
+                                  className="object-cover object-top"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          {shot.label ? (
-                            <figcaption className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-muted)]">
-                              {shot.label}
-                            </figcaption>
-                          ) : null}
-                        </figure>
+                            {shot.label ? (
+                              <figcaption className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-muted)]">
+                                {shot.label}
+                              </figcaption>
+                            ) : null}
+                          </figure>
+                        </Link>
                       ))}
                     </div>
                   </div>
