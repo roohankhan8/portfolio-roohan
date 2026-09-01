@@ -205,6 +205,14 @@ export const experienceItems: ExperienceItem[] = [
       "Rebuilt the backend of theber.com in Laravel with a more modular structure, designed RBAC for multiple user types, optimized SQL queries on a large production database, and supported project lifecycle APIs and file workflows.",
   },
   {
+    title: "Wordpress Developer",
+    organization: "Freelance",
+    period: "July 2024 - February 2025",
+    location: "Karachi, Pakistan",
+    description:
+      "Created Wordpress-based projects for clients, implementing custom themes, plugins, and responsive designs while ensuring cross-browser compatibility and performance optimization.",
+  },
+  {
     title: "Backend Developer",
     organization: "NED Scholars",
     period: "April 2023 - June 2024",

@@ -168,6 +168,7 @@ button {
 
 .section-block {
   padding-block: clamp(1.5rem, 6vw, 8rem);
+  scroll-margin-top: 1.5rem;
 }
 
 .surface-panel {

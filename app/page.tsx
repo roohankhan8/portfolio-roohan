@@ -25,7 +25,7 @@ export default function Home() {
       <EngineeringApproachSection />
       <ExperienceSection />
       <ExplorationSection />
-      <GitHubSection />
+      {/* <GitHubSection /> */}
       <ContactSection />
       <SiteFooter />
     </PageShell>
