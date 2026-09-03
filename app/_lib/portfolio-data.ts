@@ -85,10 +85,13 @@ export type GitHubSummary = {
 };
 
 export const siteMeta = {
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://portfolio-roohan.netlify.app",
+  name: "Roohan Khan",
   title: "Roohan Khan | Associate Software Engineer - Backend",
   description:
     "Backend-focused software engineer building Laravel APIs, admin systems, integrations, and maintainable web applications.",
   linkedInUrl: "https://pk.linkedin.com/in/roohan-khan8",
+  githubUrl: "https://github.com/roohankhan8",
   contactEmail: "roohankhan8@gmail.com",
   resumeUrl: "/Roohan_Khan_Resume_Backend.pdf",
 };

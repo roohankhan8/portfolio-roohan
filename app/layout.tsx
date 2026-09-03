@@ -14,17 +14,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteMeta.url),
   title: siteMeta.title,
   description: siteMeta.description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
+    url: "/",
     title: siteMeta.title,
     description: siteMeta.description,
     type: "website",
+    siteName: siteMeta.name,
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Roohan Khan — Backend-focused Software Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteMeta.title,
     description: siteMeta.description,
+    images: ["/opengraph-image"],
   },
 };
 
