@@ -8,8 +8,8 @@ export function SkillsSection() {
     <section id="skills" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          title="Capabilities organized around delivery, architecture, and product responsibility."
-          description="Instead of listing tools without context, this section shows the technologies and practices I use in the kinds of systems teams actually need shipped and maintained."
+          title="Technologies I use to build and support backend products."
+          description="My primary stack is PHP, Laravel, relational databases, and REST APIs. I also work across frontend, mobile, CMS, data, and AI tooling when a product requires end-to-end delivery."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           {skillGroups.map((group, index) => (

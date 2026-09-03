@@ -1,6 +1,7 @@
 type SectionHeadingProps = {
   title: string;
   description?: string;
+  subtext?: string;
   align?: "left" | "center";
   align_description?: "left" | "center";
 };
@@ -8,6 +9,7 @@ type SectionHeadingProps = {
 export function SectionHeading({
   title,
   description,
+  subtext = "",
   align = "left",
   align_description = "left",
 }: SectionHeadingProps) {
@@ -25,6 +27,11 @@ export function SectionHeading({
         {description ? (
           <p className="max-w-2xl text-base leading-7 text-[var(--text-secondary)] sm:text-lg">
             {description}
+          </p>
+        ) : null}
+        {subtext ? (
+          <p className="text-sm text-[var(--text-tertiary)]">
+            {subtext}
           </p>
         ) : null}
       </div>

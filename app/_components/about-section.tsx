@@ -5,35 +5,12 @@ export function AboutSection() {
     <section id="about" className="section-block">
       <div className="container-shell gap-10 flex flex-col items-center">
         <SectionHeading
-          title="Backend systems built with product thinking, not just API endpoints."
-          description="If you need an engineer who can translate requirements into clean backend workflows, durable data models, and maintainable delivery, this section shows the direction and depth behind that work."
+          title="Backend engineering shaped by product needs, data, and real operational workflows."
+          description="I’m a backend developer based in Karachi, currently working with PHP and Laravel at K-Labs. My experience includes rebuilding a production Laravel portal and developing ecommerce, booking, payment, admin, and AI-assisted workflows. I’m especially interested in systems where backend architecture, financial logic, and data intersect."
+          // subtext="I enjoy turning ambiguous requirements into explicit business rules, predictable data models, and APIs that frontend and mobile teams can depend on. I’m currently deepening my knowledge of system design, testing, queues, observability, and AI-enabled application architecture."
           align="center"
           align_description="center"
         />
-        {/* <div className="surface-panel rounded-[1.5rem] p-6 sm:p-8">
-          <div className="space-y-6">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
-                Focus
-              </p>
-              <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
-                Strongest publicly visible work centers on Laravel, PHP,
-                REST-style application flows, payment logic, and products that
-                need structured persistence instead of shallow UI-only demos.
-              </p>
-            </div>
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
-                Current direction
-              </p>
-              <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
-                The learning path visible across GitHub and LinkedIn keeps
-                moving toward modern backend architecture, AI-enabled workflows,
-                cleaner boundaries, and data-centric software engineering.
-              </p>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

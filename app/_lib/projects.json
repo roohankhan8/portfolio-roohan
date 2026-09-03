@@ -1,11 +1,11 @@
 [
   {
     "slug": "faz3a",
-    "title": "Faz3a",
+    "title": "Faz3a service-booking platform",
     "period": "Live",
     "role": "Backend Engineer",
-    "summary": "Service booking platform for users, paired with a vendor app for service providers.",
-    "problem": "Connect customers who need services with vendors who can provide them through coordinated booking, service, and vendor workflows.",
+    "summary": "Service marketplace connecting customers with providers through coordinated booking, vendor, service-status, and administrative workflows.",
+    "problem": "Customers and service providers require different application flows but must share one reliable booking lifecycle. The backend must coordinate service discovery, requests, vendor operations, booking status, and administrative control without allowing the two experiences to drift out of sync.",
     "stack": [
       "Laravel",
       "Nova",
@@ -13,9 +13,11 @@
       "MySQL"
     ],
     "highlights": [
-      "Worked as a backend engineer across the user booking experience and vendor operations.",
-      "Supported separate application flows for customers and service providers.",
-      "Product website: v2.faz3a.io."
+      "Developed backend workflows shared by the customer booking experience and the vendor application.",
+      "Supported separate customer and provider operations while keeping booking state and business rules consistent across both products.",
+      "Built and maintained Laravel Nova workflows used to administer the platform.",
+      "Collaborated with mobile app teammates to translate application requirements into API behavior and validation rules.",
+      "Supported 3 application roles with booking states and operational workflows across the customer, vendor, and admin experiences."
     ],
     "demoUrl": "https://play.google.com/store/apps/details?id=com.faz3a.vendor",
     "screenshots": [
@@ -35,11 +37,11 @@
   },
   {
     "slug": "bhive",
-    "title": "Bhive",
-    "period": "In development",
+    "title": "Bhive multi-vendor ecommerce platform",
+    "period": "In Development",
     "role": "Backend Engineer",
-    "summary": "Ecommerce platform for Bahrain with support for multiple vendors, currently in development.",
-    "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
+    "summary": "Multi-vendor ecommerce platform for Bahrain with API-driven customer, vendor, catalog, checkout, order, and administrative workflows.",
+    "problem": "A multi-vendor marketplace must separate vendor-owned products and operations while giving customers one coherent shopping experience. The backend needs to coordinate catalog data, carts, checkout, payments, vendor-specific orders, and platform administration without treating the system like a single-store application.",
     "stack": [
       "Laravel",
       "MySQL",
@@ -47,9 +49,11 @@
       "Vue"
     ],
     "highlights": [
-      "Worked as a backend engineer on the platform's API and product workflows.",
-      "Designed around multiple vendors rather than a single-store commerce model.",
-      "Continuing development toward a Bahrain-focused ecommerce product."
+      "Develop Laravel APIs and database-backed workflows used by the customer application, vendor operations, and administrative tooling.",
+      "Model marketplace behavior around vendor ownership, product catalogs, carts, checkout, orders, and status transitions.",
+      "Coordinate a single customer checkout with vendor-specific fulfillment records while preserving a consistent payment state.",
+      "Build operational workflows with Laravel Nova for product, vendor, order, and platform administration.",
+      "Implemented Tap Payment checkout using explicit pending, processing, paid, failed, and refunded states, with webhook verification before finalizing orders."
     ],
     "screenshots": [
       {
@@ -97,11 +101,11 @@
   },
   {
     "slug": "website-support-for-the-ber",
-    "title": "The BER backend rebuild",
-    "period": "2025 - January 2026",
-    "role": "Backend Developer",
-    "summary": "Laravel backend rebuild for theber.com focused on modular architecture, role-aware workflows, and production database performance.",
-    "problem": "Replace a harder-to-maintain backend with a Laravel application that could support multiple user roles, project lifecycle operations, and a large production data set more reliably.",
+    "title": "Modernizing The BER’s production backend with Laravel",
+    "period": "Jun 2025 - Jul 2026",
+    "role": "Backend Developer · Part time",
+    "summary": "Rebuilt core parts of The BER’s legacy PHP portal in Laravel, covering role-aware operations, project lifecycle workflows, file handling, administrative queues, and production database performance.",
+    "problem": "The existing portal combined legacy application logic, multiple user roles, document workflows, and a large production database in code that was increasingly difficult to extend safely. The rebuild needed to preserve existing business behavior while introducing clearer Laravel modules and more predictable authorization and data access.",
     "stack": [
       "Laravel",
       "PHP",
@@ -110,10 +114,10 @@
       "RBAC"
     ],
     "highlights": [
-      "Rebuilt the backend of theber.com using Laravel with a modular, scalable architecture.",
-      "Designed role-based access control for builders, raters, modelers, admins, and students.",
-      "Optimized SQL queries on a large production database to reduce load and improve response times.",
-      "Developed APIs and file-handling workflows for plan management, submissions, and full project lifecycle operations."
+      "Migrated core portal workflows from legacy PHP into focused Laravel controllers and services while preserving existing production behavior.",
+      "Implemented role-aware access for builders, raters, modelers, administrators, and students across project and administrative workflows.",
+      "Built APIs and file workflows for plan management, document review, submissions, approval queues, and project lifecycle operations.",
+      "DeReworked database access patterns on high-volume screens to remove repeated lookups and reduce unnecessary production queries."
     ],
     "screenshots": [
       {

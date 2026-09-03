@@ -6,8 +6,8 @@ export function ExperienceSection() {
     <section id="experience" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          title="Experience that maps directly to backend ownership and team contribution."
-          description="For recruiters, clients, and engineering leads, this section highlights the roles and responsibilities most relevant to API development, admin systems, data workflows, and production support."
+          title="Professional experience building backend systems and product workflows."
+          description="My experience spans Laravel APIs, admin platforms, legacy modernization, database-backed workflows, CMS development, and production support across commercial and academic products."
         />
         <div className="grid gap-4">
           {experienceItems.map((item) => (

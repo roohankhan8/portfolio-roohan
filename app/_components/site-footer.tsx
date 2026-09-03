@@ -14,6 +14,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="flex flex-wrap gap-4">
+          <div>© 2026 Roohan Khan. Built with Next.js and deployed on Netlify.</div>
           {socialLinks.map((link) => (
             <a
               key={link.href}

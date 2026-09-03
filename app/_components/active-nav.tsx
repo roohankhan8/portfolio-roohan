@@ -148,20 +148,14 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setActiveHref(item.href)}
-                    className={`nav-pill group flex h-11 items-center overflow-hidden rounded-full border px-4 transition-all duration-300 ease-out ${
+                    className={`nav-pill flex h-11 items-center rounded-full border px-4 transition-all duration-300 ease-out ${
                       isActive
                         ? "nav-pill-active text-[var(--text)]"
                         : "text-[var(--text-secondary)] hover:text-[var(--text)]"
                     }`}
                   >
                     <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
-                    <span
-                      className={`overflow-hidden whitespace-nowrap pl-0 text-sm transition-all duration-300 ease-out ${
-                        isActive
-                          ? "max-w-32 pl-3 opacity-100"
-                          : "max-w-0 opacity-0 group-hover:max-w-32 group-hover:pl-3 group-hover:opacity-100"
-                      }`}
-                    >
+                    <span className="whitespace-nowrap pl-3 text-sm">
                       {item.label}
                     </span>
                   </a>

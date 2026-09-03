@@ -89,6 +89,8 @@ export const siteMeta = {
   description:
     "Backend-focused software engineer building Laravel APIs, admin systems, integrations, and maintainable web applications.",
   linkedInUrl: "https://pk.linkedin.com/in/roohan-khan8",
+  contactEmail: "roohankhan8@gmail.com",
+  resumeUrl: "/Roohan_Khan_Resume_Backend.pdf",
 };
 
 export const navItems: NavItem[] = [
@@ -121,20 +123,25 @@ export const socialLinks: SocialLink[] = [
 export const focusAreas: FocusArea[] = [
   {
     label: "Backend Systems",
-    description: "Service-oriented backend work across frameworks, APIs, and maintainable system boundaries.",
+    description: "Laravel applications, REST APIs, authentication, authorization, background workflows, and maintainable service boundaries.",
+  },
+  {
+    label: "Database & Domain Design",
+    description: "Relational data models, Eloquent workflows, query optimization, migrations, and business rules designed around real product behavior.",
+  },
+  {
+    label: "Payment & Integration",
+    description: "Checkout orchestration, payment-state handling, webhooks, external APIs, and failure-aware integration workflows.",
+  },
+  {
+    label: "Admin & Business Workflows",
+    description: "Role-aware admin systems, approval queues, file processing, reporting, and operational tools built with Nova, Filament, and Statamic.",
   },
   {
     label: "Frontend",
     description: "Responsive interfaces spanning component systems, app shells, and product-facing frontend delivery.",
   },
-  {
-    label: "Payment Integration",
-    description: "Checkout flows, gateway handling, and reliable payment-state management across products.",
-  },
-  {
-    label: "AI",
-    description: "AI-assisted workflows and local tooling used to speed delivery, exploration, and product implementation.",
-  },
+
   {
     label: "Data and ML",
     description: "Python-led analysis, applied ML, business reporting, and practical data tooling.",
@@ -172,68 +179,68 @@ export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((pro
 export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
-    summary: "Primary lane: Laravel application development spanning APIs, database design, RBAC, admin workflows, and maintainable backend architecture.",
+    summary: "My primary area: Laravel applications, REST APIs, relational data modeling, authentication, authorization, queues, integrations, and admin workflows.",
     items: ["PHP", "Laravel", "REST APIs", "Authentication", "Authorization", "MVC Architecture", "Eloquent ORM"],
   },
   {
     title: "Frontend",
-    summary: "Frontend stack used for modern interfaces, responsive product work, and shipping complete web experiences when the product needs it.",
+    summary: "Supporting frontend experience used to integrate APIs, build internal tools, and deliver complete product workflows when needed.",
     items: ["Vue", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     title: "Mobile",
-    summary: "Mobile technologies used for API-connected application flows across cross-platform product work.",
+    summary: "Cross-platform experience consuming APIs and implementing product flows in Flutter and React Native.",
     items: ["React Native", "Flutter"],
   },
   {
     title: "Data and AI",
-    summary: "Data and AI work grounded in practical Python analysis, visualization, and experimentation workflows.",
+    summary: "Supporting experience with Python analysis, machine-learning experimentation, retrieval workflows, and AI-enabled application features.",
     items: ["Pandas", "NumPy", "Matplotlib"],
   },
   {
     title: "Tools and Workflow",
-    summary: "Tools used for building, debugging, collaborating, and moving product work from implementation into delivery.",
+    summary: "Tools I use for source control, API testing, debugging, code review, and AI-assisted development.",
     items: ["Codex", "GitHub", "Postman"],
   },
   {
     title: "Data Stores",
-    summary: "Primary databases used across application work, spanning relational systems and document-oriented storage.",
+    summary: "Relational and document databases used for transactional applications, structured workflows, and experimentation.",
     items: ["MySQL", "PostgreSQL", "MongoDB"],
   },
 ];
 
 export const experienceItems: ExperienceItem[] = [
   {
-    title: "Jr. Backend Developer",
+    title: "Associate Software Engineer — Backend",
     organization: "K-Labs",
-    period: "February 2026 - Present",
+    period: "Feb 2026 - Present",
     location: "Karachi, Pakistan",
     description:
-      "Designs and develops backend systems and RESTful APIs for web and mobile applications using PHP and Laravel, while also building admin and content workflows with Laravel Nova, Statamic, and Filament.",
+      "Build and maintain PHP and Laravel backends for web and mobile products, including REST APIs, relational data workflows, and administrative tooling with Laravel Nova, Statamic, and Filament. Collaborate with frontend, mobile, and product teammates to translate requirements into validated application behavior.",
   },
   {
-    title: "Backend Developer",
+    title: "Backend Developer - Part-time",
     organization: "Digital Marketing 30",
-    period: "June 2025 - July 2026",
+    period: "Jun 2025 - Jul 2026",
     location: "Karachi, Pakistan",
     description:
-      "Rebuilt the backend of theber.com in Laravel with a more modular structure, designed RBAC for multiple user types, optimized SQL queries on a large production database, and supported project lifecycle APIs and file workflows.",
+      "Rebuilt core workflows from The BER’s legacy PHP portal in Laravel, implemented authorization for multiple user roles, improved data access on production admin screens, and developed APIs and file workflows spanning document review and project lifecycle operations.",
   },
   {
     title: "Wordpress Developer",
     organization: "Freelance",
-    period: "July 2024 - February 2025",
+    period: "Jul 2024 - Feb 2025",
     location: "Karachi, Pakistan",
     description:
-      "Created Wordpress-based projects for clients, implementing custom themes, plugins, and responsive designs while ensuring cross-browser compatibility and performance optimization.",
+      "Delivered WordPress websites for clients, adapting themes and plugins, implementing responsive interfaces, and handling deployment, compatibility, and performance requirements.",
   },
   {
-    title: "Backend Developer",
+    title: "Backend Developer · University Project",
     organization: "NED Scholars",
-    period: "April 2023 - June 2024",
+    period: "Apr 2023 - Jun 2024",
     location: "Karachi, Pakistan",
     description:
-      "Worked as a Django backend developer on a university logbook system, implementing authentication, relational data models, and structured record-management workflows.",
+      "Developed backend features for a Django-based academic logbook, including authentication, relational data models, and structured workflows for creating and maintaining records.",
   },
   // {
   //   title: "BS in Computational Finance",
@@ -247,33 +254,33 @@ export const experienceItems: ExperienceItem[] = [
 export const engineeringApproach = [
   {
     title: "Understand the workflow",
-    description: "Start with the actual product problem, the actors in the system, and the state that needs to be preserved.",
+    description: "Identify the users, business rules, state transitions, constraints, and failure cases before choosing an implementation.",
   },
   {
     title: "Model the data carefully",
-    description: "Shape database structure and domain records early so product behavior stays predictable as the system grows.",
+    description: "Design records and relationships around domain behavior so validation, authorization, and reporting remain predictable.",
   },
   {
     title: "Build the API around real use cases",
-    description: "Treat endpoints, validation, and auth as first-class product architecture rather than an afterthought.",
+    description: "Shape endpoints around complete application workflows rather than exposing database operations directly.",
   },
   {
     title: "Integrate external services safely",
-    description: "Handle payments, third-party services, and background workflows with explicit state and reliable boundaries.",
+    description: "Treat payments, webhooks, external APIs, retries, and partial failures as explicit stateful workflows.",
   },
   {
     title: "Keep the system maintainable",
-    description: "Favor separable responsibilities, pragmatic testing, and clear code paths that are easier to extend later.",
+    description: "Use clear responsibilities, focused tests, observable failures, and code paths that another engineer can extend safely.",
   },
 ];
 
 export const explorationAreas = [
-  "NestJS",
   "System design",
+  "Automated and integration testing",
+  "Queues and event-driven workflows",
+  "Observability and production debugging",
   "Advanced Laravel architecture",
-  "AI-enabled applications",
-  "Data engineering",
-  "Clean backend boundaries",
+  "AI-enabled backend applications"
 ];
 
 export const githubSummaries: GitHubSummary[] = [

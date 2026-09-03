@@ -9,8 +9,8 @@ export function ProjectsSection() {
     <section id="work" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
-          title="Projects that show how I turn requirements into working software."
-          description="This is a focused selection of backend-heavy builds, product systems, and implementation work that an organization can evaluate for execution, ownership, and technical range."
+          title="Selected backend work: the problems, decisions, and systems behind the product."
+          description="These projects highlight my responsibilities across application logic, data modeling, APIs, authorization, integrations, and production workflows. Where source code is private, I explain the problem, my ownership, and the technical decisions I can disclose."
         />
         <div className="grid gap-5">
           {projects.map((project, index) => (
@@ -57,7 +57,7 @@ export function ProjectsSection() {
                       {project.problem}
                     </p>
                     <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
-                      Case Study
+                      My contribution
                     </p>
                     <ul className="mt-4 space-y-3 text-sm leading-6 text-[var(--text-secondary)]">
                       {project.highlights.map((highlight) => (

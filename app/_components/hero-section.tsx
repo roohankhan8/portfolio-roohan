@@ -1,15 +1,5 @@
-import { socialLinks } from "../_lib/portfolio-data";
+import { siteMeta } from "../_lib/portfolio-data";
 import { Hero3DScene } from "./hero-3d-scene";
-import { TechBadge } from "./tech-badge";
-
-const highlightedStack = [
-  "PHP",
-  "Laravel",
-  "REST APIs",
-  "Blade Templating",
-  "MySQL",
-  "AI Workflows",
-];
 
 export function HeroSection() {
   return (
@@ -28,9 +18,7 @@ export function HeroSection() {
                 Backend Developer &amp; Software Engineer
               </p>
               <p className="text-lg leading-8 text-[var(--text-secondary)]">
-                I build APIs, backend systems, integrations, and complete
-                digital products with a strong focus on Laravel, scalable web
-                applications, ecommerce workflows, and data-driven software.
+                I build APIs and database-backed systems for ecommerce, service platforms, admin workflows, and third-party integrations. My focus is reliable application logic, clear data models, and software that remains maintainable as product requirements grow.
               </p>
             </div>
           </div>
@@ -39,19 +27,21 @@ export function HeroSection() {
               href="#work"
               className="button-primary inline-flex h-13 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all hover:-translate-y-0.5"
             >
-              View My Work
+              Explore Selected Work
             </a>
-            {socialLinks.slice(0, 2).map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="button-secondary inline-flex h-13 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all hover:-translate-y-0.5"
-              >
-                {link.label}
-              </a>
-            ))}
+            <a
+              href={siteMeta.resumeUrl}
+              download
+              className="button-secondary inline-flex h-13 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all hover:-translate-y-0.5"
+            >
+              Download Resume
+            </a>
+            <a
+              href={`mailto:${siteMeta.contactEmail}`}
+              className="button-secondary inline-flex h-13 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all hover:-translate-y-0.5"
+            >
+              Contact Me
+            </a>
           </div>
           {/* <ul className="flex flex-wrap gap-3">
             {highlightedStack.map((item) => (

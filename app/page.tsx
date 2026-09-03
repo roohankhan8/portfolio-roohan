@@ -18,13 +18,13 @@ export default function Home() {
     <PageShell>
       <SiteHeader items={navItems} socials={socialLinks} />
       <HeroSection />
-      <FocusStrip />
       <AboutSection />
       <ProjectsSection />
       <SkillsSection />
       <EngineeringApproachSection />
       <ExperienceSection />
       <ExplorationSection />
+      <FocusStrip />
       {/* <GitHubSection /> */}
       <ContactSection />
       <SiteFooter />

@@ -8,8 +8,8 @@ export function ExplorationSection() {
       <div className="container-shell flex flex-col items-center gap-10">
         <SectionHeading
           align="center"
-          title="Areas I am actively deepening to stay useful in stronger engineering teams."
-          description="This is where my current learning effort is going: deeper architecture, better system boundaries, and more capable AI-enabled application design."
+          title="What I’m deepening next."
+          description="I’m currently strengthening the areas that matter most for larger backend systems: system design, automated testing, queues and event-driven workflows, observability, advanced Laravel architecture, and AI-enabled application patterns."
         />
         <div className="surface-panel rounded-[1.75rem] p-6 sm:p-8">
           <ul className="flex flex-wrap justify-center gap-3">
