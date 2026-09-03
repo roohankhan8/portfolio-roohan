@@ -11,7 +11,7 @@ export function ExplorationSection() {
           title="What I’m deepening next."
           description="I’m currently strengthening the areas that matter most for larger backend systems: system design, automated testing, queues and event-driven workflows, observability, advanced Laravel architecture, and AI-enabled application patterns."
         />
-        <div className="surface-panel rounded-[1.75rem] p-6 sm:p-8">
+        {/* <div className="surface-panel rounded-[1.75rem] p-6 sm:p-8">
           <ul className="flex flex-wrap justify-center gap-3">
             {explorationAreas.map((item) => (
               <li key={item}>
@@ -19,7 +19,7 @@ export function ExplorationSection() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </section>
   );

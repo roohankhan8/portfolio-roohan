@@ -128,14 +128,17 @@ export const focusAreas: FocusArea[] = [
   {
     label: "Database & Domain Design",
     description: "Relational data models, Eloquent workflows, query optimization, migrations, and business rules designed around real product behavior.",
+    technologies: ["MySQL", "PostgreSQL", "MongoDB", "SQL"],
   },
   {
     label: "Payment & Integration",
     description: "Checkout orchestration, payment-state handling, webhooks, external APIs, and failure-aware integration workflows.",
+    technologies: ["Stripe", "Tap Payment", "Safepay"],
   },
   {
     label: "Admin & Business Workflows",
     description: "Role-aware admin systems, approval queues, file processing, reporting, and operational tools built with Nova, Filament, and Statamic.",
+    technologies: ["Laravel", "Filament", "Statamic"],
   },
   {
     label: "Frontend",

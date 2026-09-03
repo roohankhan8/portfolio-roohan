@@ -222,20 +222,26 @@ export function FocusStrip() {
     <section aria-label="Focus areas" className="pb-4">
       <div className="container-shell">
         <div className="grid gap-4 lg:grid-cols-2">
-          {focusAreas.map((area) => (
-            <article
-              key={area.label}
-              className="surface-panel rounded-2xl p-5 transition-transform hover:-translate-y-1"
-            >
-              <LogoField areaLabel={area.label} names={area.technologies ?? focusAreaBadges[area.label] ?? []} />
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
-                {area.label}
-              </p>
-              <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
-                {area.description}
-              </p>
-            </article>
-          ))}
+          {focusAreas.map((area) => {
+            const technologies = area.technologies ?? focusAreaBadges[area.label] ?? [];
+
+            return (
+              <article
+                key={area.label}
+                className="surface-panel rounded-2xl p-5 transition-transform hover:-translate-y-1"
+              >
+                {technologies.length > 0 && (
+                  <LogoField areaLabel={area.label} names={technologies} />
+                )}
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
+                  {area.label}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
+                  {area.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
