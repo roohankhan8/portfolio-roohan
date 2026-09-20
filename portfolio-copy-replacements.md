@@ -221,12 +221,12 @@ Optional second paragraph:
 ### Recommended project order
 
 1. The BER backend rebuild
-2. Bhive
-3. Faz3a
+2. Confidential multi-vendor ecommerce platform
+3. Confidential service-booking platform
 4. AI Content Workflow App
 5. Logbook
 
-If Faz3a has stronger measurable production evidence than BER, place Faz3a first.
+If the service-booking platform has stronger measurable production evidence than BER, place it first.
 
 ---
 
@@ -326,17 +326,17 @@ Do not add a repository button if the source is private.
 
 ---
 
-## 8. Bhive
+## 8. Confidential multi-vendor ecommerce platform
 
 ### Title
 
 **Current**
 
-> Bhive
+> Confidential multi-vendor ecommerce platform
 
 **Replace with**
 
-> Bhive multi-vendor ecommerce platform
+> Confidential multi-vendor ecommerce platform
 
 ### Period
 
@@ -408,17 +408,17 @@ Add “View Product” only when a public product URL is available.
 
 ---
 
-## 9. Faz3a
+## 9. Confidential service-booking platform
 
 ### Title
 
 **Current**
 
-> Faz3a
+> Confidential service-booking platform
 
 **Replace with**
 
-> Faz3a service-booking platform
+> Confidential service-booking platform
 
 ### Summary
 
@@ -450,7 +450,7 @@ Add “View Product” only when a public product URL is available.
 >
 > Supported separate application flows for customers and service providers.
 >
-> Product website: v2.faz3a.io.
+> Product website: omitted for confidentiality.
 
 ### Replace with
 
@@ -1024,7 +1024,7 @@ Complete this privately before adding numbers to the public site.
 - Number of modules or workflows you owned: `[VALUE]`
 - Technical method used: `[VALUE]`
 
-### Bhive
+### Confidential multi-vendor ecommerce platform
 
 - Number of vendor/customer/admin roles: `[VALUE]`
 - Number of checkout or order states: `[VALUE]`
@@ -1032,7 +1032,7 @@ Complete this privately before adding numbers to the public site.
 - One-payment/multi-vendor behavior: `[DESCRIPTION]`
 - APIs or modules you owned: `[VALUE]`
 
-### Faz3a
+### Confidential service-booking platform
 
 - Customer/vendor/admin applications supported: `[VALUE]`
 - Booking states or workflows: `[VALUE]`

@@ -92,9 +92,9 @@ Your project data contains properties such as `demoUrl` and `repoUrl`, but [proj
 
 Consequently:
 
-* Faz3a has a `demoUrl`, but visitors cannot click it.
+* The confidential service-booking project had a `demoUrl`, but visitors could not click it.
 * Logbook has a `repoUrl`, but visitors cannot open its code.
-* “Product website: v2.faz3a.io” appears as ordinary text.
+* A confidential product website appeared as ordinary text.
 * Screenshots look good but do not lead anywhere.
 * The portfolio asks visitors to trust your descriptions.
 
@@ -182,7 +182,7 @@ Your current cards contain summaries, not full case studies.
 I would create dedicated pages for:
 
 * `/work/the-ber`
-* `/work/bhive`
+* `/work/multi-vendor-ecommerce-platform`
 * `/work/ai-content-workflow`
 
 Each should include:
@@ -359,12 +359,12 @@ Your most convincing technical project appears third.
 Suggested order:
 
 1. The BER backend rebuild
-2. Bhive
-3. Faz3a
+2. Confidential multi-vendor ecommerce platform
+3. Confidential service-booking platform
 4. AI Content Workflow App
 5. Logbook
 
-If Faz3a has stronger production scale or measurable outcomes than BER, put it first—but provide those facts.
+If the service-booking project has stronger production scale or measurable outcomes than BER, put it first—but provide those facts.
 
 Order projects by evidence and relevance, not chronology.
 

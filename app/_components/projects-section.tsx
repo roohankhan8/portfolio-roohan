@@ -10,7 +10,7 @@ export function ProjectsSection() {
       <div className="container-shell space-y-10">
         <SectionHeading
           title="Selected backend work: the problems, decisions, and systems behind the product."
-          description="These projects highlight my responsibilities across application logic, data modeling, APIs, authorization, integrations, and production workflows. Where source code is private, I explain the problem, my ownership, and the technical decisions I can disclose."
+          description="These projects highlight my responsibilities across application logic, data modeling, APIs, authorization, integrations, and production workflows. Confidential client work is described without product names, links, screenshots, or proprietary details."
         />
         <div className="grid gap-5">
           {projects.map((project, index) => (

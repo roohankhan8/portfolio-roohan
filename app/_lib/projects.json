@@ -1,7 +1,7 @@
 [
   {
-    "slug": "faz3a",
-    "title": "Faz3a service-booking platform",
+    "slug": "service-booking-platform",
+    "title": "Confidential service-booking platform",
     "period": "Live",
     "role": "Backend Engineer",
     "summary": "Service marketplace connecting customers with providers through coordinated booking, vendor, service-status, and administrative workflows.",
@@ -18,29 +18,14 @@
       "Built and maintained Laravel Nova workflows used to administer the platform.",
       "Collaborated with mobile app teammates to translate application requirements into API behavior and validation rules.",
       "Supported 3 application roles with booking states and operational workflows across the customer, vendor, and admin experiences."
-    ],
-    "demoUrl": "https://play.google.com/store/apps/details?id=com.faz3a.vendor",
-    "screenshots": [
-      {
-        "file": "faz3a-client-1.png",
-        "alt": "Faz3a client application home screen",
-        "label": "Client",
-        "url": "https://play.google.com/store/apps/details?id=com.faz3a.client"
-      },
-      {
-        "file": "faz3a-vendor-2.png",
-        "alt": "Faz3a vendor application home screen",
-        "label": "Vendor",
-        "url": "https://play.google.com/store/apps/details?id=com.faz3a.vendor"
-      }
     ]
   },
   {
-    "slug": "bhive",
-    "title": "Bhive multi-vendor ecommerce platform",
+    "slug": "multi-vendor-ecommerce-platform",
+    "title": "Confidential multi-vendor ecommerce platform",
     "period": "In Development",
     "role": "Backend Engineer",
-    "summary": "Multi-vendor ecommerce platform for Bahrain with API-driven customer, vendor, catalog, checkout, order, and administrative workflows.",
+    "summary": "Multi-vendor ecommerce platform with API-driven customer, vendor, catalog, checkout, order, and administrative workflows.",
     "problem": "A multi-vendor marketplace must separate vendor-owned products and operations while giving customers one coherent shopping experience. The backend needs to coordinate catalog data, carts, checkout, payments, vendor-specific orders, and platform administration without treating the system like a single-store application.",
     "stack": [
       "Laravel",
@@ -54,26 +39,14 @@
       "Coordinate a single customer checkout with vendor-specific fulfillment records while preserving a consistent payment state.",
       "Build operational workflows with Laravel Nova for product, vendor, order, and platform administration.",
       "Implemented Tap Payment checkout using explicit pending, processing, paid, failed, and refunded states, with webhook verification before finalizing orders."
-    ],
-    "screenshots": [
-      {
-        "file": "bhive.png",
-        "alt": "Bhive mobile product screen",
-        "label": "Home"
-      },
-      {
-        "file": "bhive-order-detail.jpeg",
-        "alt": "Bhive order detail screen",
-        "label": "Order Detail"
-      }
     ]
   },
   {
-    "slug": "abayty",
-    "title": "Abayty",
+    "slug": "custom-commerce-app",
+    "title": "Confidential custom commerce app",
     "period": "Live",
     "role": "Backend Engineer",
-    "summary": "Custom abaya design app built for women in Bahrain with step-by-step design and ordering workflows.",
+    "summary": "Custom product design app with step-by-step configuration and ordering workflows.",
     "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
     "stack": [
       "Laravel",
@@ -82,21 +55,7 @@
     ],
     "highlights": [
       "Worked as a backend engineer on the platform's API and dashboard.",
-      "Designed around seamless experience for women to design and order custom abayas."
-    ],
-    "screenshots": [
-      {
-        "file": "abayty-splash.webp",
-        "alt": "Abayty splash screen",
-        "label": "Home",
-        "url": "https://play.google.com/store/apps/details?id=com.abayty.app"
-      },
-      {
-        "file": "abayty-flow.webp",
-        "alt": "Abayty design flow screen",
-        "label": "Flow",
-        "url": "https://play.google.com/store/apps/details?id=com.abayty.app"
-      }
+      "Designed around a seamless experience for customers to configure and order custom products."
     ]
   },
   {

@@ -1,15 +1,7 @@
 import projectData from "./projects.json";
 import type { StaticImageData } from "next/image";
-import bhiveScreenshot from "../_screenshots/bhive.png";
-import bhiveOrderDetailScreenshot from "../_screenshots/bhive-order-detail.jpeg";
-import faz3aClient1Screenshot from "../_screenshots/faz3a-client-1.png";
-import faz3aClient2Screenshot from "../_screenshots/faz3a-client-2.png";
-import faz3aVendor1Screenshot from "../_screenshots/faz3a-vendor-1.png";
-import faz3aVendor2Screenshot from "../_screenshots/faz3a-vendor-2.png";
 import theberScreenshot from "../_screenshots/theber.png";
 import theberportalScreenshot from "../_screenshots/theber-portal.png";
-import abaytySplashScreenshot from "../_screenshots/abayty-splash.webp";
-import abaytyFlowScreenshot from "../_screenshots/abayty-flow.webp";
 
 export type NavItem = {
   label: string;
@@ -160,16 +152,8 @@ export const focusAreas: FocusArea[] = [
 ];
 
 const screenshotAssets: Record<string, StaticImageData> = {
-  "bhive.png": bhiveScreenshot,
-  "bhive-order-detail.jpeg": bhiveOrderDetailScreenshot,
-  "faz3a-client-1.png": faz3aClient1Screenshot,
-  "faz3a-client-2.png": faz3aClient2Screenshot,
-  "faz3a-vendor-1.png": faz3aVendor1Screenshot,
-  "faz3a-vendor-2.png": faz3aVendor2Screenshot,
   "theber.png": theberScreenshot,
   "theber-portal.png": theberportalScreenshot,
-  "abayty-splash.webp": abaytySplashScreenshot,
-  "abayty-flow.webp": abaytyFlowScreenshot,
 };
 
 export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((project) => ({
