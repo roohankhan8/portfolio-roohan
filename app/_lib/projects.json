@@ -113,20 +113,21 @@
     ]
   },
   {
-    "slug": "logbook",
-    "title": "Logbook",
-    "period": "Jul 2023 - Jun 2024",
-    "summary": "Django-based web application for creating, editing, and managing structured logbook entries collaboratively.",
-    "problem": "Give teams and individuals a cleaner way to record activities, processes, and experiments in a shared web workflow.",
+    "slug": "transaction-reconciliation-platform",
+    "title": "Transaction Reconciliation Platform",
+    "period": "2026",
+    "summary": "Backend project focused on structured business workflows and data management.",
+    "problem": "Build a reliable foundation for managing structured records and the workflows around them.",
     "stack": [
       "Django",
       "Python",
-      "HTML"
+      "React",
+      "Backend Development"
     ],
     "highlights": [
-      "Focused on structured entry management rather than simple note storage.",
-      "Designed for collaborative record keeping in web form."
+      "Built a focused backend project around structured data and workflow management.",
+      "Kept the implementation centered on clear domain behavior and maintainable application logic."
     ],
-    "repoUrl": "https://github.com/roohankhan8/Logbook"
+    "repoUrl": "https://github.com/roohankhan8/ubl"
   }
 ]
