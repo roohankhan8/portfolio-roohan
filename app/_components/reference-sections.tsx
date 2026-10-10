@@ -1,4 +1,6 @@
+import { createElement } from "react";
 import { engineeringApproach, experienceItems, focusAreas, projects, siteMeta, skillGroups, socialLinks } from "../_lib/portfolio-data";
+import { getTechColor, getTechIcon } from "../_lib/tech-icons";
 import { SectionHeading } from "./section-heading";
 
 export function ReferenceProjectsSection() {
@@ -24,7 +26,11 @@ export function ReferenceSkillsSection() {
 
   return <section id="skills" className="section-block section-muted"><div className="container-shell space-y-9">
     <SectionHeading eyebrow="Technical services" title="Technologies I use to build and support backend products." description="My primary stack is PHP, Laravel, relational databases, and REST APIs. I also work across frontend, mobile, CMS, data, and AI tooling when a product requires end-to-end delivery." />
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{referenceGroups.map((group, index) => <article key={group.title} className="skill-card"><p className="eyebrow-label">0{index + 1}</p><h3>{group.title}</h3><p>{group.summary}</p><ul className="tag-list">{group.items.map((item) => <li key={item}>{item}</li>)}</ul></article>)}</div>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{referenceGroups.map((group, index) => <article key={group.title} className="skill-card"><p className="eyebrow-label">0{index + 1}</p><h3>{group.title}</h3><p>{group.summary}</p><ul className="tag-list">{group.items.map((item) => {
+      const Icon = getTechIcon(item);
+      const color = getTechColor(item);
+      return <li key={item}>{Icon ? createElement(Icon, { "aria-hidden": true, style: color ? { color } : undefined }) : null}<span>{item}</span></li>;
+    })}</ul></article>)}</div>
   </div></section>;
 }
 

@@ -89,8 +89,8 @@ export const siteMeta = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "About", href: "#home" },
-  { label: "Philosophy", href: "#about" },
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
   { label: "Stack", href: "#skills" },
   { label: "Process", href: "#process" },
@@ -172,12 +172,12 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Backend",
     summary: "My primary area: Laravel applications, REST APIs, relational data modeling, authentication, authorization, queues, integrations, and admin workflows.",
-    items: ["PHP", "Laravel", "REST APIs", "Authentication", "Authorization", "MVC Architecture", "Eloquent ORM"],
+    items: ["PHP", "Laravel", "Python", "Django", "REST APIs", "Authentication", "Authorization", "MVC Architecture", "Eloquent ORM"],
   },
   {
     title: "Frontend",
     summary: "Supporting frontend experience used to integrate APIs, build internal tools, and deliver complete product workflows when needed.",
-    items: ["Vue", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
+    items: ["Vue", "React", "Next.js", "Tailwind CSS"],
   },
   {
     title: "Mobile",
@@ -197,7 +197,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Data Stores",
     summary: "Relational and document databases used for transactional applications, structured workflows, and experimentation.",
-    items: ["MySQL", "PostgreSQL", "MongoDB"],
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
   },
 ];
 

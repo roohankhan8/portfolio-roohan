@@ -44,6 +44,7 @@ import {
   SiPostman,
   SiPython,
   SiReact,
+  SiRedis,
   SiScikitlearn,
   SiStatamic,
   SiTailwindcss,
@@ -104,6 +105,7 @@ const techIcons: Record<string, IconType> = {
   React: SiReact,
   "React 19": SiReact,
   "React Native": SiReact,
+  Redis: SiRedis,
   "REST APIs": FaServer,
   "Relational Data Modeling": FaDatabase,
   Safepay: FaCreditCard,
@@ -140,6 +142,43 @@ const techIcons: Record<string, IconType> = {
   "Tools and Workflow": FaBook,
 };
 
+const techColors: Record<string, string> = {
+  Angular: "#DD0031",
+  CSS: "#1572B6",
+  CSS3: "#1572B6",
+  Django: "#44B78B",
+  Filament: "#FDAE4B",
+  Flutter: "#54C5F8",
+  Git: "#F05032",
+  GitHub: "#FFFFFF",
+  HTML: "#E34F26",
+  HTML5: "#E34F26",
+  Laravel: "#FF2D20",
+  "Laravel 13": "#FF2D20",
+  MongoDB: "#47A248",
+  MySQL: "#4479A1",
+  "Next.js": "#FFFFFF",
+  NumPy: "#4D77CF",
+  Pandas: "#E70488",
+  PHP: "#777BB4",
+  PostgreSQL: "#4169E1",
+  Postman: "#FF6C37",
+  Python: "#FFD43B",
+  React: "#61DAFB",
+  "React 19": "#61DAFB",
+  "React Native": "#61DAFB",
+  Redis: "#FF4438",
+  Statamic: "#FF269E",
+  "Tailwind CSS": "#06B6D4",
+  TypeScript: "#3178C6",
+  Vue: "#4FC08D",
+  "Vue.js": "#4FC08D",
+};
+
 export function getTechIcon(name: string): IconType | null {
   return techIcons[name] ?? null;
+}
+
+export function getTechColor(name: string): string | null {
+  return techColors[name] ?? null;
 }
