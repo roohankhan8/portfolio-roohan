@@ -89,11 +89,13 @@ export const siteMeta = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "#home" },
+  { label: "Philosophy", href: "#about" },
   { label: "Work", href: "#work" },
-  { label: "Skills", href: "#skills" },
+  { label: "Stack", href: "#skills" },
+  { label: "Process", href: "#process" },
   { label: "Experience", href: "#experience" },
+  { label: "What's Next", href: "#exploration" },
   { label: "Contact", href: "#contact" },
 ];
 
