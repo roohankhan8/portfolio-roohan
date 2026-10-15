@@ -25,20 +25,20 @@ export function HeroSection() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="#work"
-              className="button-primary inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-medium"
+              className="button-primary max-md:flex-1"
             >
               Explore Selected Work
             </a>
             <a
               href={siteMeta.resumeUrl}
               download
-              className="button-secondary inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-medium"
+              className="button-secondary"
             >
               Download Resume
             </a>
             <a
               href={`mailto:${siteMeta.contactEmail}`}
-              className="button-secondary inline-flex h-11 items-center justify-center rounded-lg px-5 text-sm font-medium"
+              className="button-secondary max-md:hidden"
             >
               Contact Me
             </a>

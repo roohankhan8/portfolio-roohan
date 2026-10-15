@@ -40,7 +40,7 @@ export function ReferenceHeader({
           </a>
           <nav aria-label="Primary">
             {items.map((item) => (
-              <a key={item.href} href={item.href}>
+              <a key={item.href} href={item.href} className={item.href in mobileIcons ? undefined : "nav-optional"}>
                 {item.label}
               </a>
             ))}
