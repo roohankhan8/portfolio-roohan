@@ -20,7 +20,7 @@ export function ProjectsSection() {
               className="surface-panel rounded-[1.75rem] p-6 sm:p-8"
             >
               <div
-                className={`grid gap-8 ${project.screenshots?.length
+                className={`grid gap-8 lg:items-center ${project.screenshots?.length
                   ? "lg:grid-cols-[minmax(0,1fr)_minmax(16rem,0.72fr)]"
                   : "lg:grid-cols-[minmax(0,1fr)]"
                   }`}
@@ -85,21 +85,43 @@ export function ProjectsSection() {
                     <div className="grid grid-cols-2 gap-3">
                       {project.screenshots.map((shot) => {
                         const href = shot.url ?? project.demoUrl;
+                        // Phone captures (narrower than 3:5) get a phone frame; anything wider is a desktop page and gets a browser window.
+                        const isPhone = shot.src.width / shot.src.height < 0.6;
                         const figure = (
                           <figure
-                            className={`w-full ${project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
+                            className={`w-full ${!isPhone ? "col-span-2" : project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
                           >
-                            <div className="project-shot-frame rounded-[2rem] border border-[var(--border-strong)] p-2">
-                              <div className="project-shot-inner relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem]">
-                                <Image
-                                  src={shot.src}
-                                  alt={shot.alt}
-                                  fill
-                                  sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
-                                  className="object-cover object-top"
-                                />
+                            {isPhone ? (
+                              <div className="project-shot-frame rounded-[2rem] border border-[var(--border-strong)] p-2">
+                                <div className="project-shot-inner relative aspect-[9/19.5] overflow-hidden rounded-[1.1rem]">
+                                  <Image
+                                    src={shot.src}
+                                    alt={shot.alt}
+                                    fill
+                                    sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 272px"
+                                    className="object-cover object-top"
+                                  />
+                                </div>
                               </div>
-                            </div>
+                            ) : (
+                              <div className="project-shot-frame overflow-hidden rounded-xl border border-[var(--border-strong)]">
+                                <div aria-hidden="true" className="flex items-center gap-1.5 border-b border-[var(--border)] px-3 py-2">
+                                  <span className="h-2 w-2 rounded-full bg-[var(--border-strong)]" />
+                                  <span className="h-2 w-2 rounded-full bg-[var(--border-strong)]" />
+                                  <span className="h-2 w-2 rounded-full bg-[var(--border-strong)]" />
+                                  <span className="ml-2 h-4 flex-1 rounded-md bg-[var(--surface-strong)]" />
+                                </div>
+                                {/* Tall pages clip at the bottom like a real viewport instead of being squeezed or cropped on the sides. */}
+                                <div className="project-shot-inner max-h-[22rem] overflow-hidden">
+                                  <Image
+                                    src={shot.src}
+                                    alt={shot.alt}
+                                    sizes="(max-width: 1024px) 90vw, 560px"
+                                    className="h-auto w-full"
+                                  />
+                                </div>
+                              </div>
+                            )}
                             {shot.label ? (
                               <figcaption className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.14em] text-[var(--text-muted)]">
                                 {shot.label}

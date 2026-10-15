@@ -4,6 +4,8 @@ import theberScreenshot from "../_screenshots/theber.png";
 import theberportalScreenshot from "../_screenshots/theber-portal.png";
 import larvis1Screenshot from "../_screenshots/larvis-1.jpg";
 import larvis2Screenshot from "../_screenshots/larvis-2.jpg";
+import recon1Screenshot from "../_screenshots/recon-1.png";
+import recon2Screenshot from "../_screenshots/recon-2.png";
 
 export type NavItem = {
   label: string;
@@ -160,6 +162,8 @@ const screenshotAssets: Record<string, StaticImageData> = {
   "theber-portal.png": theberportalScreenshot,
   "larvis-1.jpg": larvis1Screenshot,
   "larvis-2.jpg": larvis2Screenshot,
+  'recon-1.png': recon1Screenshot,
+  'recon-2.png': recon2Screenshot,
 };
 
 export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((project) => ({
