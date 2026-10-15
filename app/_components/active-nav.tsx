@@ -5,11 +5,13 @@ import Image from "next/image";
 import {
   FaBars,
   FaBriefcase,
+  FaCompass,
   FaEnvelope,
   FaGithub,
   FaHome,
   FaLinkedinIn,
   FaMoon,
+  FaProjectDiagram,
   FaRegBuilding,
   FaSun,
   FaTimes,
@@ -37,7 +39,9 @@ const navIcons: Record<NavItem["href"], IconType> = {
   "#about": FaUserAlt,
   "#work": FaBriefcase,
   "#skills": FaTools,
+  "#process": FaProjectDiagram,
   "#experience": FaRegBuilding,
+  "#exploration": FaCompass,
   "#contact": FaEnvelope,
 };
 
@@ -148,6 +152,8 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setActiveHref(item.href)}
+                    aria-label={item.label}
+                    title={item.label}
                     className={`nav-pill flex h-11 items-center rounded-full border px-4 transition-all duration-300 ease-out ${
                       isActive
                         ? "nav-pill-active text-[var(--text)]"
@@ -155,7 +161,7 @@ export function ActiveNav({ items, socials }: ActiveNavProps) {
                     }`}
                   >
                     <Icon aria-hidden="true" className="h-4 w-4 shrink-0" />
-                    <span className="whitespace-nowrap pl-3 text-sm">
+                    <span className="hidden whitespace-nowrap pl-3 text-sm xl:inline">
                       {item.label}
                     </span>
                   </a>

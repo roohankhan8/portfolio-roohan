@@ -31,7 +31,7 @@ export function TechBadge({
   const iconClass = size === "md" ? "h-[1.125rem] w-[1.125rem]" : "h-4 w-4";
   const textClass = size === "md" ? "text-xs tracking-[0.12em]" : "text-[11px] tracking-[0.14em]";
   const hasIcon = getTechIcon(item) !== null;
-  const labelClass = hasIcon && !showLabel
+  const labelClass = hasIcon && previewOnly && !showLabel
     ? `max-w-0 overflow-hidden whitespace-nowrap pl-0 opacity-0 transition-all duration-300 ease-out group-hover/tech:max-w-40 group-hover/tech:pl-3 group-hover/tech:opacity-100 ${textClass}`
     : `${hasIcon ? "pl-2" : ""} ${textClass}`;
   const paddingClass = previewOnly && hasIcon

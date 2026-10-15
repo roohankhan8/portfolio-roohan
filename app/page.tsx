@@ -4,7 +4,6 @@ import { ContactSection } from "./_components/contact-section";
 import { EngineeringApproachSection } from "./_components/engineering-approach-section";
 import { ExperienceSection } from "./_components/experience-section";
 import { ExplorationSection } from "./_components/exploration-section";
-import { FocusStrip } from "./_components/focus-strip";
 import { GitHubSection } from "./_components/github-section";
 import { HeroSection } from "./_components/hero-section";
 import { ProjectsSection } from "./_components/projects-section";
@@ -71,7 +70,6 @@ export default function Home() {
       <EngineeringApproachSection />
       <ExperienceSection />
       <ExplorationSection />
-      <FocusStrip />
       {/* <GitHubSection /> */}
       <ContactSection />
       <SiteFooter />

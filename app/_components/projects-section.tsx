@@ -82,11 +82,11 @@ export function ProjectsSection() {
                     <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--accent)]">
                       Product View
                     </p>
-                    <div className="grid grid-cols-2">
-                      {project.screenshots.map((shot) => (
-                        <Link href={shot.url ?? project.demoUrl ?? "#"} key={`${project.slug}-${shot.alt}`} className="group">
+                    <div className="grid grid-cols-2 gap-3">
+                      {project.screenshots.map((shot) => {
+                        const href = shot.url ?? project.demoUrl;
+                        const figure = (
                           <figure
-                            key={`${project.slug}-${shot.alt}`}
                             className={`w-full ${project.screenshots!.length % 2 === 1 && project.screenshots!.at(-1) === shot ? "col-span-2 mx-auto max-w-[17rem]" : ""}`}
                           >
                             <div className="project-shot-frame rounded-[2rem] border border-[var(--border-strong)] p-2">
@@ -106,8 +106,17 @@ export function ProjectsSection() {
                               </figcaption>
                             ) : null}
                           </figure>
-                        </Link>
-                      ))}
+                        );
+                        const key = `${project.slug}-${shot.alt}`;
+
+                        return href ? (
+                          <Link href={href} key={key} target="_blank" rel="noreferrer" className="group">
+                            {figure}
+                          </Link>
+                        ) : (
+                          <div key={key}>{figure}</div>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : null}

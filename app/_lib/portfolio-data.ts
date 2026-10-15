@@ -2,6 +2,8 @@ import projectData from "./projects.json";
 import type { StaticImageData } from "next/image";
 import theberScreenshot from "../_screenshots/theber.png";
 import theberportalScreenshot from "../_screenshots/theber-portal.png";
+import larvis1Screenshot from "../_screenshots/larvis-1.jpg";
+import larvis2Screenshot from "../_screenshots/larvis-2.jpg";
 
 export type NavItem = {
   label: string;
@@ -93,7 +95,9 @@ export const navItems: NavItem[] = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
   { label: "Skills", href: "#skills" },
+  { label: "Process", href: "#process" },
   { label: "Experience", href: "#experience" },
+  { label: "What's Next", href: "#exploration" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -154,6 +158,8 @@ export const focusAreas: FocusArea[] = [
 const screenshotAssets: Record<string, StaticImageData> = {
   "theber.png": theberScreenshot,
   "theber-portal.png": theberportalScreenshot,
+  "larvis-1.jpg": larvis1Screenshot,
+  "larvis-2.jpg": larvis2Screenshot,
 };
 
 export const projects: ProjectItem[] = (projectData as ProjectRecord[]).map((project) => ({

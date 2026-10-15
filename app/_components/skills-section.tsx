@@ -5,7 +5,7 @@ import { TechBadge } from "./tech-badge";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="section-block">
+    <section id="skills" className="section-block section-muted">
       <div className="container-shell space-y-10">
         <SectionHeading
           title="Technologies I use to build and support backend products."

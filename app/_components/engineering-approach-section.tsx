@@ -3,7 +3,7 @@ import { SectionHeading } from "./section-heading";
 
 export function EngineeringApproachSection() {
   return (
-    <section className="section-block">
+    <section id="process" className="section-block">
       <div className="container-shell space-y-10">
         <SectionHeading
           title="How I turn product requirements into maintainable backend workflows."

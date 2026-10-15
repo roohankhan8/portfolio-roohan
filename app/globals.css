@@ -10,7 +10,7 @@
   --border-strong: #bccbdd;
   --text: #102033;
   --text-secondary: #42556d;
-  --text-muted: #72839a;
+  --text-muted: #5f7089;
   --accent: #0f6bcb;
   --accent-hover: #1d7be0;
   --accent-soft: rgba(15, 107, 203, 0.1);
@@ -171,6 +171,10 @@ button {
   scroll-margin-top: 4rem;
 }
 
+.section-muted {
+  background: color-mix(in srgb, var(--surface-strong) 70%, transparent);
+}
+
 .surface-panel {
   border: 1px solid var(--border);
   background: var(--surface-panel-bg);
@@ -195,7 +199,7 @@ button {
 
 .button-secondary:hover,
 .button-ghost:hover {
-  border-color: rgba(243, 247, 251, 0.18);
+  border-color: var(--border-strong);
   background: var(--button-secondary-hover-bg);
 }
 

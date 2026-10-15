@@ -30,7 +30,7 @@ export function SectionHeading({
           </p>
         ) : null}
         {subtext ? (
-          <p className="text-sm text-[var(--text-tertiary)]">
+          <p className="text-sm text-[var(--text-muted)]">
             {subtext}
           </p>
         ) : null}

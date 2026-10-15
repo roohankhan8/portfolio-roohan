@@ -3,7 +3,7 @@ import { SectionHeading } from "./section-heading";
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="section-block">
+    <section id="experience" className="section-block section-muted">
       <div className="container-shell space-y-10">
         <SectionHeading
           title="Professional experience building backend systems and product workflows."

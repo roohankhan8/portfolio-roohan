@@ -6,12 +6,7 @@
     "role": "Backend Engineer",
     "summary": "Service marketplace connecting customers with providers through coordinated booking, vendor, service-status, and administrative workflows.",
     "problem": "Customers and service providers require different application flows but must share one reliable booking lifecycle. The backend must coordinate service discovery, requests, vendor operations, booking status, and administrative control without allowing the two experiences to drift out of sync.",
-    "stack": [
-      "Laravel",
-      "Nova",
-      "Vue.js",
-      "MySQL"
-    ],
+    "stack": ["Laravel", "Nova", "Vue.js", "MySQL"],
     "highlights": [
       "Developed backend workflows shared by the customer booking experience and the vendor application.",
       "Supported separate customer and provider operations while keeping booking state and business rules consistent across both products.",
@@ -27,12 +22,7 @@
     "role": "Backend Engineer",
     "summary": "Multi-vendor ecommerce platform with API-driven customer, vendor, catalog, checkout, order, and administrative workflows.",
     "problem": "A multi-vendor marketplace must separate vendor-owned products and operations while giving customers one coherent shopping experience. The backend needs to coordinate catalog data, carts, checkout, payments, vendor-specific orders, and platform administration without treating the system like a single-store application.",
-    "stack": [
-      "Laravel",
-      "MySQL",
-      "Nova",
-      "Vue"
-    ],
+    "stack": ["Laravel", "MySQL", "Nova", "Vue"],
     "highlights": [
       "Develop Laravel APIs and database-backed workflows used by the customer application, vendor operations, and administrative tooling.",
       "Model marketplace behavior around vendor ownership, product catalogs, carts, checkout, orders, and status transitions.",
@@ -48,11 +38,7 @@
     "role": "Backend Engineer",
     "summary": "Custom product design app with step-by-step configuration and ordering workflows.",
     "problem": "Build the backend foundation for a multi-vendor commerce experience with the product and vendor workflows needed to scale beyond a single seller.",
-    "stack": [
-      "Laravel",
-      "MySQL",
-      "Nova"
-    ],
+    "stack": ["Laravel", "MySQL", "Nova"],
     "highlights": [
       "Worked as a backend engineer on the platform's API and dashboard.",
       "Designed around a seamless experience for customers to configure and order custom products."
@@ -65,13 +51,7 @@
     "role": "Backend Developer · Part time",
     "summary": "Rebuilt core parts of The BER’s legacy PHP portal in Laravel, covering role-aware operations, project lifecycle workflows, file handling, administrative queues, and production database performance.",
     "problem": "The existing portal combined legacy application logic, multiple user roles, document workflows, and a large production database in code that was increasingly difficult to extend safely. The rebuild needed to preserve existing business behavior while introducing clearer Laravel modules and more predictable authorization and data access.",
-    "stack": [
-      "Laravel",
-      "PHP",
-      "MySQL",
-      "REST APIs",
-      "RBAC"
-    ],
+    "stack": ["Laravel", "PHP", "MySQL", "REST APIs", "RBAC"],
     "highlights": [
       "Migrated core portal workflows from legacy PHP into focused Laravel controllers and services while preserving existing production behavior.",
       "Implemented role-aware access for builders, raters, modelers, administrators, and students across project and administrative workflows.",
@@ -99,17 +79,25 @@
     "period": "2026",
     "summary": "Laravel and React application that turns AI generation into a stateful writing workflow instead of a single prompt screen.",
     "problem": "Create a durable content workspace where briefs, analysis, drafts, conversations, and final output stay connected across the full writing lifecycle.",
-    "stack": [
-      "Laravel 13",
-      "React 19",
-      "Laravel AI",
-      "MySQL",
-      "Pest"
-    ],
+    "stack": ["Laravel 13", "React 19", "Laravel AI", "MySQL", "Pest"],
     "highlights": [
       "Used a shared ContentProject model to persist briefs, drafts, model settings, and final output.",
       "Separated AI agents by workflow responsibility instead of pushing everything through one prompt layer.",
       "Stored conversation threads, prompt runs, and streaming results to make the product stateful."
+    ],
+    "screenshots": [
+      {
+        "file": "larvis-1.jpg",
+        "alt": "Landing page screenshot for the AI content workflow app",
+        "label": "Landing",
+        "url": "https://github.com/roohankhan8/larvis-agent"
+      },
+      {
+        "file": "larvis-2.jpg",
+        "alt": "Workflow page screenshot for the AI content workflow app",
+        "label": "Portal",
+        "url": "https://github.com/roohankhan8/larvis-agent"
+      }
     ]
   },
   {
@@ -118,12 +106,7 @@
     "period": "2026",
     "summary": "Backend project focused on structured business workflows and data management.",
     "problem": "Build a reliable foundation for managing structured records and the workflows around them.",
-    "stack": [
-      "Django",
-      "Python",
-      "React",
-      "Backend Development"
-    ],
+    "stack": ["Django", "Python", "React", "Backend Development"],
     "highlights": [
       "Built a focused backend project around structured data and workflow management.",
       "Kept the implementation centered on clear domain behavior and maintainable application logic."
